@@ -1,0 +1,23 @@
+{ "name": "UC2/MC Oberrhein1 2FSPs 20",
+  "scenario_settings": {
+            "network": "MV Oberrhein1",
+            "no_samples": 1000,
+            "distribution": "Normal_Limits_Oriented",
+            "keep_mp": false,
+            "max_curr_per": 100,
+            "max_volt_pu": 1.05,
+            "min_volt_pu": 0.95,
+            "UseCase": {"No.": 3,
+                        "Ver.": 0,
+                        "FSPs": 2,
+                        "no_scenarios": 20},
+            "FSPs": "All",
+            "scenario_type": {"name": "CS",
+                              "no.": 0},
+            "dp": 0.01,
+            "dq": 0.01,
+            "l_sens": 1,
+            "v_sens": 0.005,
+            "multiplicity": true
+  }
+}

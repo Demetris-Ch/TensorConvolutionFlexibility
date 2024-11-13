@@ -1,0 +1,29 @@
+{ "name": "UC1/Compare Ob0",
+  "scenario_settings": {
+            "network": "MV Oberrhein0",
+            "TTD": false,
+            "keep_mp": false,
+            "max_curr_per": 100,
+            "max_volt_pu": 1.05,
+            "min_volt_pu": 0.95,
+            "compare_brute": true,
+            "compare_settings": { "conv_file": "UC1/Conv_Conv_Brute_Ob0_2",
+                                  "brute_force_file": "UC1/Flexibility_area_BruteOb0_2.txt",
+                                  "decimals": 3},
+            "FSPs": "All",
+            "FSP_load_indices": [57],
+            "FSP_DG_indices": [29],
+            "Non-Linear DGs": [],
+            "observable_lines_indices": [-1],
+            "observable_buses_indices": [-1],
+            "scenario_type": {"name": "Unaltered",
+                              "no.": 1},
+            "plot_settings": {"convex_hull": false,
+                              "plot_combination": false,
+                              "multiplicity": false,
+                              "convolution": true,
+                              "filenames" : [],
+                              "output type": "png"
+            }
+  }
+}

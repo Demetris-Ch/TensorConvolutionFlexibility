@@ -1,0 +1,3 @@
+Total duration: 289.19680285453796 [s]
+10000 Sample creation duration: 1.4166619777679443 [s]
+Total Power Flow duration: 287.78014087677 [s]

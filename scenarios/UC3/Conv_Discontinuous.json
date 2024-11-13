@@ -1,0 +1,32 @@
+{ "name": "UC3/Conv Discontinuous",
+  "scenario_settings": {
+            "network": "CIGRE MV",
+            "dp": 0.01,
+            "dq": 0.02,
+            "resolution": 100,
+            "distribution": "Thorough",
+            "TTD": false,
+            "keep_mp": false,
+            "max_curr_per": 100,
+            "max_volt_pu": 1.06,
+            "min_volt_pu": 0.94,
+            "Convolution_simulation": true,
+            "multiplicity": true,
+            "uncertainty": false,
+            "FSPs": "All",
+            "FSP_load_indices": [12, 14, 16],
+            "FSP_DG_indices": [0, 1, 2, 3, 8],
+            "Non-Linear DGs": [8],
+            "observable_lines_indices": [0, 1, 10, 11],
+            "observable_buses_indices": [0, 1, 2, 3, 12, 13, 14],
+            "scenario_type": {"name": "CS",
+                              "no.": 101},
+            "plot_settings": {"convex_hull": false,
+                              "plot_combination": false,
+                              "multiplicity": false,
+                              "convolution": true,
+                              "filenames" : [],
+                              "output type": "png"
+            }
+  }
+}

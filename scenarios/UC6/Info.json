@@ -1,0 +1,29 @@
+{ "name": "UC6/MC Scenario Info",
+  "scenario_settings": {
+            "_comment": "currently only the CIGRE MV network is supported, no_samples: per FSP here",
+            "network": "CIGRE MV",
+            "dp": 0.25,
+            "dq": 0.25,
+            "distribution": "Normal_Limits_Oriented",
+            "keep_mp": false,
+            "max_curr_per": 100,
+            "max_volt_pu": 1.05,
+            "min_volt_pu": 0.95,
+            "uc6": true,
+            "FSPs": "All",
+            "FSP_load_indices": [3, 11],
+            "FSP_DG_indices": [8],
+            "Non-Linear DGs": [],
+            "observable_lines_indices": [0, 1, 10, 11],
+            "observable_buses_indices": [0, 1, 2, 3, 12, 13, 14],
+            "scenario_type": {"name": "CS",
+                              "no.": 101},
+            "plot_settings": {"convex_hull": false,
+                              "plot_combination": false,
+                              "multiplicity": false,
+                              "convolution": false,
+                              "filenames" : [],
+                              "output type": "png"
+            }
+  }
+}
