@@ -424,7 +424,7 @@ VI.C) Disjoint Flexibility Areas
 The result files are in the **csv_results/UC3** folder.
 Example figures generated for these scenarios are in the folder **plots/UC3**
 
-.. image:: //../plots/UC3/Disc_Scenario_121416012388_incl_infeasible.svg
+.. image:: //../plots/UC3/Disc_Scenario_121416012388_incl_infeasible.jpg
   :width: 400
 .. image:: //../plots/UC3/Conv_multi_Conv_Conv_Discontinuous.svg
   :width: 400

@@ -2,7 +2,7 @@
 import itertools
 import numpy as np
 import time
-from .utils import kumaraswamymontecarlo
+from utils import kumaraswamymontecarlo
 import pandas as pd
 
 

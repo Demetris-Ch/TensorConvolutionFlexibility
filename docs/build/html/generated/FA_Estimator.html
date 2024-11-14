@@ -18,9 +18,7 @@
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="monte_carlo" href="monte_carlo.html" />
-    <link rel="prev" title="main" href="main.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,22 +40,9 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="accuracy_estimation.html">accuracy_estimation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conv_simulations.html">conv_simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_sampler.html">data_sampler</a></li>
-<li class="toctree-l2"><a class="reference internal" href="json_reader.html">json_reader</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html">main</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">FA_Estimator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="monte_carlo.html">monte_carlo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plotting.html">plotting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scenario_setup.html">scenario_setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opf.html">opf</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html">utils</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
 </ul>
 
         </div>
@@ -74,7 +59,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../api.html">API</a></li>
       <li class="breadcrumb-item active">FA_Estimator</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/generated/FA_Estimator.rst.txt" rel="nofollow"> View page source</a>
@@ -90,25 +74,25 @@
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">exhaustive_pf</span></code>([net, net_name, dp, dq, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#FA_Estimator.exhaustive_pf" title="FA_Estimator.exhaustive_pf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exhaustive_pf</span></code></a>([net, net_name, dp, dq, ...])</p></td>
 <td><p>Package Function to run the exhaustive power flow algorithm.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">monte_carlo_pf</span></code>([net, net_name, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#FA_Estimator.monte_carlo_pf" title="FA_Estimator.monte_carlo_pf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">monte_carlo_pf</span></code></a>([net, net_name, ...])</p></td>
 <td><p>Package Function to run the Monte Carlo based power flow algorithm.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">opf</span></code>([net, net_name, opf_step, max_curr_per, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#FA_Estimator.opf" title="FA_Estimator.opf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">opf</span></code></a>([net, net_name, opf_step, max_curr_per, ...])</p></td>
 <td><p>Package function to run the optimal power flow algorithm.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tc_plus</span></code>([net, net_name, dp, dq, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#FA_Estimator.tc_plus" title="FA_Estimator.tc_plus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tc_plus</span></code></a>([net, net_name, dp, dq, ...])</p></td>
 <td><p>Package Function to run the TensorConvolution+ algorithm.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tc_plus_adapt</span></code>([net, net_name, max_curr_per, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#FA_Estimator.tc_plus_adapt" title="FA_Estimator.tc_plus_adapt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tc_plus_adapt</span></code></a>([net, net_name, max_curr_per, ...])</p></td>
 <td><p>Package Function to run the TensorConvolution+ algorithm and adapt from stored tensors for previous OCs.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tc_plus_merge</span></code>([net, net_name, dp, dq, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#FA_Estimator.tc_plus_merge" title="FA_Estimator.tc_plus_merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tc_plus_merge</span></code></a>([net, net_name, dp, dq, ...])</p></td>
 <td><p>Package Function to run the TensorConvolution+ algorithm but merge FSPs for network components that are sensitive to more than 'max_fsps' FSPs (to solve possible memory issues but possibly reduce accuracy).</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tc_plus_save_tensors</span></code>([net, net_name, dp, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#FA_Estimator.tc_plus_save_tensors" title="FA_Estimator.tc_plus_save_tensors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tc_plus_save_tensors</span></code></a>([net, net_name, dp, ...])</p></td>
 <td><p>Package Function to run the TensorConvolution+ algorithm and save the tensors during estimation.</p></td>
 </tr>
 </tbody>
@@ -118,10 +102,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="main.html" class="btn btn-neutral float-left" title="main" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="monte_carlo.html" class="btn btn-neutral float-right" title="monte_carlo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

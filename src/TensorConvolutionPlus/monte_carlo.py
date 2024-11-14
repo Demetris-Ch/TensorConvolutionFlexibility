@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import time
-from .utils import update_pqs2, check_voltage_limits, check_line_current_limits, update_pqs_wl2, \
+from utils import update_pqs2, check_voltage_limits, check_line_current_limits, update_pqs_wl2, \
     check_trafo_current_limits
 import pandapower as pp
 from tqdm import tqdm

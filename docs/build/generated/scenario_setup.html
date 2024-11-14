@@ -18,9 +18,7 @@
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="opf" href="opf.html" />
-    <link rel="prev" title="plotting" href="plotting.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,22 +40,9 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="accuracy_estimation.html">accuracy_estimation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conv_simulations.html">conv_simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_sampler.html">data_sampler</a></li>
-<li class="toctree-l2"><a class="reference internal" href="json_reader.html">json_reader</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html">main</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FA_Estimator.html">FA_Estimator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="monte_carlo.html">monte_carlo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plotting.html">plotting</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">scenario_setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opf.html">opf</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html">utils</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
 </ul>
 
         </div>
@@ -74,7 +59,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../api.html">API</a></li>
       <li class="breadcrumb-item active">scenario_setup</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/generated/scenario_setup.rst.txt" rel="nofollow"> View page source</a>
@@ -90,34 +74,34 @@
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_cs</span></code>(net, settings)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#scenario_setup.apply_cs" title="scenario_setup.apply_cs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_cs</span></code></a>(net, settings)</p></td>
 <td><p>Apply CS scenario shifts on the network</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_tss</span></code>(net, settings)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#scenario_setup.apply_tss" title="scenario_setup.apply_tss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_tss</span></code></a>(net, settings)</p></td>
 <td><p>Apply TSS scenario shifts on the network</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_uss</span></code>(net, settings)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#scenario_setup.apply_uss" title="scenario_setup.apply_uss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_uss</span></code></a>(net, settings)</p></td>
 <td><p>Apply USS scenario shifts on the network</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_fsp</span></code>(settings)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#scenario_setup.get_fsp" title="scenario_setup.get_fsp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_fsp</span></code></a>(settings)</p></td>
 <td><p>Get indices of FSPs if any of them are specified as -1.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_network</span></code>(settings)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#scenario_setup.get_network" title="scenario_setup.get_network"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_network</span></code></a>(settings)</p></td>
 <td><p>Gen the network specified in settings.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_observable_lines_buses</span></code>(settings)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#scenario_setup.get_observable_lines_buses" title="scenario_setup.get_observable_lines_buses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_observable_lines_buses</span></code></a>(settings)</p></td>
 <td><p>Get indices of observable lines and buses if any of them are specified as -1.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_operating_point</span></code>(settings)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#scenario_setup.get_operating_point" title="scenario_setup.get_operating_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_operating_point</span></code></a>(settings)</p></td>
 <td><p>Get network PCC P,Q (y)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_unobservable_lines_buses_indices</span></code>(settings)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#scenario_setup.get_unobservable_lines_buses_indices" title="scenario_setup.get_unobservable_lines_buses_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_unobservable_lines_buses_indices</span></code></a>(settings)</p></td>
 <td><p>Gen indices of network unobservable lines (all lines not specified as observable)</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rand_resample</span></code>(net, no_change_loads, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#scenario_setup.rand_resample" title="scenario_setup.rand_resample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rand_resample</span></code></a>(net, no_change_loads, ...)</p></td>
 <td><p>Randomly sample Operating Condition shift for adaptability case study</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_settings</span></code>(settings)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#scenario_setup.update_settings" title="scenario_setup.update_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_settings</span></code></a>(settings)</p></td>
 <td><p>Update settings by changing observable and unobservable bus and line information based on the loaded network</p></td>
 </tr>
 </tbody>
@@ -127,10 +111,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="plotting.html" class="btn btn-neutral float-left" title="plotting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="opf.html" class="btn btn-neutral float-right" title="opf" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

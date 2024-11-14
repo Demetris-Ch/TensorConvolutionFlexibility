@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import time
 import torch
-from .utils import tensor_convolve_nd_torch, tensor_convolve_nd_torch_half, fix_missing_point
+from utils import tensor_convolve_nd_torch, tensor_convolve_nd_torch_half, fix_missing_point
 import pandapower as pp
 import pandas as pd
 from tqdm import tqdm

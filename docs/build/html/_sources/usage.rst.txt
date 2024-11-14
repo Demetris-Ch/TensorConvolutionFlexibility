@@ -20,7 +20,7 @@ Available at: https://ieeexplore.ieee.org/document/10663439
 ---------------------
 II. Acknowledgements
 ---------------------
-The research, algorithm, and package development is part of the IEPG group and AI Energy lab of TU Delft.
+The authors are part of the IEPG group and AI Energy lab of TU Delft.
 This research is part of the research program 'MegaMind - Measuring, Gathering, Mining and Integrating Data for Self-management in the Edge of the Electricity System', (partly) financed by the Dutch Research Council (NWO) through the Perspectief program under number P19-25.
 
 .. image:: //../plots/IEPG_logo.jpg
@@ -30,7 +30,7 @@ This research is part of the research program 'MegaMind - Measuring, Gathering, 
 .. image:: //../plots/Tu-delft.png
   :width: 150
 .. image:: //../plots/MegaMindLogo.png
-  :width: 150
+  :width: 120
 
 
 ---------------------
@@ -38,17 +38,18 @@ III. Package
 ---------------------
 The proposed package includes the functionalities to perform flexibility area estimation.
 
+To install the package using pip, run:
+
+.. code-block:: console
+
+   (.venv) $ pip install tensorconvolutionplus
+
 To install the package through a file, place the **tensorconvolutionplus-0.1.0.tar.gz** file in an accessible path and run:
 
 .. code-block:: console
 
    (.venv) $ pip install path/to/package/tensorconvolutionplus-0.1.0.tar.gz
 
-To install the package online (currently unavailable), run:
-
-.. code-block:: console
-
-   (.venv) $ pip install tensorconvolutionplus
 
 Main functionalities include:
 
@@ -163,7 +164,7 @@ The examples vary in resolution and number of FSPs.
 The figures bellow illustrate the resulting FA for each line respectively.
 
 .. image:: //../plots/ExhaustivePowerFlow2024-11-05_17-00-00_incl_infeasible.png
-  :width: 400
+  :width: 380
 .. image:: //../plots/ExhaustivePowerFlow2024-11-08_14-10-05_incl_infeasible.jpg
   :width: 400
 
@@ -423,7 +424,7 @@ VI.C) Disjoint Flexibility Areas
 The result files are in the **csv_results/UC3** folder.
 Example figures generated for these scenarios are in the folder **plots/UC3**
 
-.. image:: //../plots/UC3/Disc_Scenario_121416012388_incl_infeasible.svg
+.. image:: //../plots/UC3/Disc_Scenario_121416012388_incl_infeasible.jpg
   :width: 400
 .. image:: //../plots/UC3/Conv_multi_Conv_Conv_Discontinuous.svg
   :width: 400
