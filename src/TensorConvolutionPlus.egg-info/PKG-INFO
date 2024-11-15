@@ -1,64 +1,27 @@
 Metadata-Version: 2.1
 Name: TensorConvolutionPlus
-Version: 0.1.0
-Summary: A package for TensorConvolution+ a flexibility area estimation algorithm
+Version: 0.1.3
+Summary: A package for TensorConvolution+ distribution network aggregated flexibility area estimation
 Author-email: Demetris Chrysostomou <d.chrysostomou@tudelft.nl>
-Project-URL: Homepage, https://github.com/Demetris-Ch/TensorConvolutionPlus
-Project-URL: Issues, https://github.com/Demetris-Ch/TensorConvolutionPlus
+Project-URL: Homepage, https://github.com/Demetris-Ch/TensorConvolutionFlexibility
+Project-URL: Issues, https://github.com/Demetris-Ch/TensorConvolutionFlexibility
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.10
 Description-Content-Type: text/x-rst
 License-File: LICENSE
-Requires-Dist: alabaster==0.7.16
-Requires-Dist: Babel==2.14.0
-Requires-Dist: build==1.0.3
-Requires-Dist: certifi==2024.2.2
-Requires-Dist: charset-normalizer==3.3.2
-Requires-Dist: colorama==0.4.6
-Requires-Dist: contourpy==1.2.0
-Requires-Dist: cycler==0.12.1
-Requires-Dist: deepdiff==6.7.1
-Requires-Dist: docutils==0.20.1
-Requires-Dist: filelock==3.13.1
-Requires-Dist: fonttools==4.48.1
-Requires-Dist: fsspec==2024.2.0
-Requires-Dist: idna==3.6
-Requires-Dist: imagesize==1.4.1
-Requires-Dist: Jinja2==3.1.3
-Requires-Dist: joblib==1.3.2
-Requires-Dist: kiwisolver==1.4.5
-Requires-Dist: MarkupSafe==2.1.5
-Requires-Dist: matplotlib==3.8.2
-Requires-Dist: mpmath==1.3.0
-Requires-Dist: networkx==3.1
-Requires-Dist: numpy==1.24.3
-Requires-Dist: ordered-set==4.1.0
-Requires-Dist: packaging==23.2
-Requires-Dist: pandapower==2.13.1
-Requires-Dist: pandas==1.5.3
-Requires-Dist: pillow==10.2.0
-Requires-Dist: pygments==2.17.2
-Requires-Dist: pyparsing==3.1.1
-Requires-Dist: pyproject-hooks==1.0.0
-Requires-Dist: python-dateutil==2.8.2
-Requires-Dist: pytz==2024.1
-Requires-Dist: requests==2.31.0
-Requires-Dist: scikit-learn==1.3.0
-Requires-Dist: scipy==1.11.2
-Requires-Dist: seaborn==0.13.2
-Requires-Dist: six==1.16.0
-Requires-Dist: snowballstemmer==2.2.0
-Requires-Dist: sympy==1.12
-Requires-Dist: threadpoolctl==3.2.0
-Requires-Dist: tntorch==1.1.1
-Requires-Dist: tomli==2.0.1
-Requires-Dist: torch==2.0.1
-Requires-Dist: tqdm==4.66.1
-Requires-Dist: typing-extensions==4.9.0
-Requires-Dist: tzdata==2023.4
-Requires-Dist: urllib3==2.2.0
+Requires-Dist: matplotlib>=3.8.2
+Requires-Dist: networkx>=3.1
+Requires-Dist: numpy>=1.24.3
+Requires-Dist: pandapower>=2.13.1
+Requires-Dist: pandas>=1.5.3
+Requires-Dist: scikit-learn>=1.3.0
+Requires-Dist: scipy>=1.11.2
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: tntorch>=1.1.1
+Requires-Dist: torch>=2.0.1
+Requires-Dist: tqdm>=4.66.1
 
 ======
 Usage
@@ -75,7 +38,23 @@ The TensorConvolution+ algorithm was published in IEEE Transactions on Smart Gri
 Available at: https://ieeexplore.ieee.org/document/10663439
 
 ---------------------
-II. Package
+II. Acknowledgements
+---------------------
+The authors are part of the IEPG group and AI Energy lab of TU Delft.
+This research is part of the research program 'MegaMind - Measuring, Gathering, Mining and Integrating Data for Self-management in the Edge of the Electricity System', (partly) financed by the Dutch Research Council (NWO) through the Perspectief program under number P19-25.
+
+.. image:: plots/IEPG_logo.jpg
+  :width: 150
+.. image:: plots/DAI_Energy_logo.png
+  :width: 150
+.. image:: plots/Tu-delft.png
+  :width: 150
+.. image:: plots/MegaMindLogo.png
+  :width: 120
+
+
+---------------------
+III. Package
 ---------------------
 The proposed package includes the functionalities to perform flexibility area estimation.
 
@@ -91,36 +70,6 @@ To install the package online (currently unavailable), run:
 
    (.venv) $ pip install tensorconvolutionplus
 
-To use the package, example python lines for each function can be:
-
-.. code-block:: console
-
-    from TensorConvolutionPlus import FA_Estimator as TCP
-
-    TCP.exhaustive_pf(net_name='MV Oberrhein0', dp=0.15, dq=0.3, fsp_load_indices=[1, 2, 3], fsp_dg_indices=[1, 2, 3])
-
-    TCP.monte_carlo_pf(net_name='MV Oberrhein0', no_samples=6000, fsp_load_indices=[1, 2, 3], fsp_dg_indices=[1, 2, 3])
-
-    TCP.opf(net_name='CIGRE MV', opf_step=0.1, fsp_load_indices=[3, 5, 8], fsp_dg_indices=[8])
-
-    TCP.tc_plus(net_name='MV Oberrhein0', fsp_load_indices=[1, 2, 3], dp=0.05, dq=0.1, fsp_dg_indices=[1, 2, 3])
-
-
-    TCP.tc_plus_merge(net_name='MV Oberrhein0', fsp_load_indices=[1, 2, 3, 4], dp=0.05, dq=0.1, fsp_dg_indices=[1, 2, 3],
-                      max_fsps=6)
-
-    TCP.tc_plus_save_tensors(net_name='MV Oberrhein0', fsp_load_indices=[1, 2, 3], dp=0.05, dq=0.1, fsp_dg_indices=[1, 2, 3])
-
-    # Importing the 'MV Oberrhein0' network as net (see tests.examples.py)
-    # Fixing the network scaling and switches (see tests.examples.py)
-    # Modifying its operating conditions (see tests.examples.py)
-    import pandapower.networks as pn
-    import pandapower as pp
-    ...
-    ...
-    TCP.tc_plus_adapt(net=net, fsp_load_indices=fsp_load_indices, fsp_dg_indices=fsp_dg_indices)
-
-
 Main functionalities include:
 
 #. TensorConvolution+, estimating FAs using the TensorConvolution+ algorithm. In the current version, the estimations can vary in:
@@ -133,7 +82,7 @@ Main functionalities include:
     - Network structure and initial operating conditions.
     - Shape of flexibility resources. Currently FSP limits are:
         - the output cannot exceed the maximum apparent power of the FSP (resulting in a semi-oval shape),
-        - the output P cannot exceed the maximum apparent power of the FSP, the output |Q| cannot exceed the maximum apparent power of the FSP (resulting in rectangular shape).
+        - the output P cannot exceed the maximum apparent power of the FSP, the output abs(Q) cannot exceed the maximum apparent power of the FSP (resulting in rectangular shape).
         - additional shapes can be adopted by modifying the sample generation function (not impacting the TensorConvolution+ aggregation).
 
 #. TensorConvolution+, while storing estimated tensors and other useful information to adapt flexibility areas for different operating conditions. In the current version, the estimations can vary in:
@@ -145,7 +94,7 @@ Main functionalities include:
     - Network structure and initial operating conditions.
     - Shape of flexibility resources. Currently FSP limits are:
         - the output cannot exceed the maximum apparent power of the FSP (resulting in a semi-oval shape),
-        - the output P cannot exceed the maximum apparent power of the FSP, the output |Q| cannot exceed the maximum apparent power of the FSP (resulting in rectangular shape).
+        - the output P cannot exceed the maximum apparent power of the FSP, the output abs(Q) cannot exceed the maximum apparent power of the FSP (resulting in rectangular shape).
         - additional shapes can be adopted by modifying the sample generation function (not impacting the TensorConvolution+ aggregation).
 
 #. TensorConvolution+, while loading previously estimated tensors and other useful information to adapt flexibility areas from prior different operating conditions. In the current version, the estimations can vary in:
@@ -183,369 +132,167 @@ Main functionalities include:
     - Network structure and initial operating conditions.
 
 
-.. _installation:
-
 ------------------
-III. Installation
+IV. Examples
 ------------------
-
-To use TensorConvolution+, first install all dependencies using pip:
+All main functionalities require first importing the FA_Estimator script from the package. Therefore, all the following examples start with the Python line:
 
 .. code-block:: console
 
-   (.venv) $ pip install requirements.txt
+    from TensorConvolutionPlus import FA_Estimator as TCP
 
+IV.A) Monte Carlo Power Flow
+---------------------------------------
+This section includes examples using the Monte Carlo PF estimation functionality. These examples used the Python script code:
 
----------------------
-IV. Running Scenarios
----------------------
+.. code-block:: console
 
-To run use case scenarios, you can use the json files under the ``scenarios`` folder:
+    TCP.monte_carlo_pf(net_name='MV Oberrhein0', no_samples=6000, fsp_load_indices=[1, 2, 3], fsp_dg_indices=[1, 2, 3], distribution='Uniform')
 
-IV.A) Accuracy in Population Estimation
+    TCP.monte_carlo_pf(net_name='MV Oberrhein0', no_samples=6000, fsp_load_indices=[1, 2, 3], fsp_dg_indices=[1, 2, 3], distribution='Kumaraswamy')
+
+    TCP.monte_carlo_pf(net_name='MV Oberrhein0', no_samples=6000, fsp_load_indices=[1, 2, 3], fsp_dg_indices=[1, 2, 3])
+
+    TCP.monte_carlo_pf(net_name='MV Oberrhein0', no_samples=12000, fsp_load_indices=[1, 2, 3], fsp_dg_indices=[1, 2, 3])
+
+The examples vary in sampling distribution and number of samples.
+The figures bellow illustrate the resulting FA for each line respectively. The lines without *distribution* input automatically obtain the 'Hard' distribution.
+
+.. image:: plots/MonteCarlo2024-11-08_14-30-32_incl_infeasible.jpg
+  :width: 400
+.. image:: plots/MonteCarlo2024-11-08_14-25-40_incl_infeasible.jpg
+  :width: 400
+.. image:: plots/MonteCarlo2024-11-05_17-06-58_incl_infeasible.jpg
+  :width: 400
+.. image:: plots/MonteCarlo2024-11-08_13-15-01_incl_infeasible.jpg
+  :width: 400
+
+IV.B) Exhaustive Power Flow
 ---------------------------------------
 
-The scenario for the journal's use case included:
+This section includes examples using the exhaustive power flow-based functionality. The script for the examples is:
 
-#.  The **BruteForce_Ob0.json** file, by running: ``python src/ScriptsForJournal/main.py UC1/BruteForce_Ob0``
-#.  The **TensorConv_Ob0.json** file, by running: ``python src/ScriptsForJournal/main.py UC1/TensorConv_Ob0``
-#.  The **Compare_Ob0.json** file, by running: ``python src/ScriptsForJournal/main.py UC1/Compare_Ob0``
+.. code-block:: console
 
-The first json file runs the Brute Force PF-based results, the second file runs the TensorConvolution+ algorithm to
-generate the results. The third file compares the results, creates the population figure for the Brute Force, and
-prints the estimated MSE.
+    TCP.exhaustive_pf(net_name='MV Oberrhein0', dp=0.15, dq=0.3, fsp_load_indices=[1, 2, 3], fsp_dg_indices=[1, 2, 3])
 
-If needed to avoid re-estimating the FAs, the results from the first two json files are in the **csv_results/UC1** folder.
+    TCP.exhaustive_pf(net_name='MV Oberrhein0', dp=0.01, dq=0.02, fsp_load_indices=[5], fsp_dg_indices=[5])
 
-In that case, to re-estimate the accuracy you can simply run:
 
-#.  The **Compare_Ob0.json** file, by running: ``python src/ScriptsForJournal/main.py UC1/Compare_Ob0``
+The examples vary in resolution and number of FSPs.
+The figures bellow illustrate the resulting FA for each line respectively.
 
-Example figures generated for these scenarios are in the folder **plots/UC1**
-
-.. image:: //../plots/UC1/Compare_Flexibility_area_BruteOb0_2.svg
-  :width: 400
-.. image:: //../plots/UC1/Conv_multi_Conv_Conv_Brute_Ob0_2.svg
+.. image:: plots/ExhaustivePowerFlow2024-11-05_17-00-00_incl_infeasible.png
+  :width: 380
+.. image:: plots/ExhaustivePowerFlow2024-11-08_14-10-05_incl_infeasible.jpg
   :width: 400
 
-IV.B) Speed and Range Accuracy
----------------------------------
-The scenario for the journal's use case included:
+IV.C) Optimal Power Flow
+---------------------------------------
+This section illustrates examples using the OPF estimation functionality. These examples used the Python script code:
 
-The CSV results are under **csv_results/UC2**
-To re-estimate the Average Accuracy and Create the Plots:
+.. code-block:: console
 
-#.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_UC2_Plot``,
+    TCP.opf(net_name='CIGRE MV', opf_step=0.1, fsp_load_indices=[3, 5, 8], fsp_dg_indices=[8])
 
-The figures are saved under **plots/UC2**
+    TCP.opf(net_name='CIGRE MV', opf_step=0.1, fsp_load_indices=[1, 4, 9], fsp_dg_indices=[8])
 
-.. image:: //../plots/UC2/Loop/Kumaraswamy_MC_Oberrhein0_4FSPs_20_8.svg
+
+The examples vary in FSPs.
+The figures bellow illustrate the resulting FA for each line respectively.
+
+.. image:: plots/OptimalPowerFlow2024-11-12_17-40-42.jpg
   :width: 400
-.. image:: //../plots/UC2/Loop/Uniform_MC_Oberrhein0_4FSPs_20_8.svg
-  :width: 400
-.. image:: //../plots/UC2/Loop/Hard_MC_Oberrhein0_4FSPs_20_8.svg
+.. image:: plots/OptimalPowerFlow2024-11-12_17-47-00.jpg
   :width: 400
 
-**To run simulations:**
+IV.D) TensorConvolution+
+---------------------------------------
+This section illustrates examples using the TensorConvolution+ FA estimation functionality. The first examples, showcasing the different shapes of flexibility from FSPs use the lines:
+
+.. code-block:: console
+
+    TCP.tc_plus(net_name='MV Oberrhein0', fsp_load_indices=[1, 2, 3], dp=0.05, dq=0.1, fsp_dg_indices=[1, 2, 3])
+
+    TCP.tc_plus(net_name='MV Oberrhein0', fsp_load_indices=[1, 2], dp=0.05, dq=0.1, fsp_dg_indices=[1, 2], flex_shape='PQmax')
 
 
+The examples vary in number of FSPs and shapes of flexibility offers. The example without the *flex_shape* input automatically obtains the value 'Smax'.
+The figures bellow illustrate the resulting FA for each line respectively.
 
-*For the Ob0 network:*
-
-#.  For <No.FSP> in [2,3,4,5] and narrow voltage limitations:
-
-    #.  Open the json file under **scenarios/UC2/Acc_Oberrhein0_UC2**.
-    #.  On the UseCase list of the Scenario settings set:  ``{"No.": 3, "Ver.": 0, "FSPs": <No.FSP>, "no_scenarios": 20}``
-    #.  Set the "name" to ``"MC Oberrhein0 <No.FSP>FSPs 20"``,
-    #.  Set the "max_volt_pu" in "scenario_settings" to 1.05,
-    #.  Set the "min_volt_pu" in "scenario_settings" to 0.95,
-    #.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_Oberrhein0_UC2``,
-
-#.  For 6 FSPs (in different machines):
-
-    #.  For <No.Ver> in [0,1,2,...19]:
-
-        #.  Open the json file under **scenarios/UC2/Acc_Oberrhein0_UC2_FSP6**.
-        #.  On the UseCase list of the Scenario settings set:  ``{"No.": 3, "Ver.": <No.Ver>, "FSPs": 6, "no_scenarios": 1, "Reduce": []}``
-        #.  Set the "max_volt_pu" in "scenario_settings" to 1.05,
-        #.  Set the "min_volt_pu" in "scenario_settings" to 0.95,
-        #.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_Oberrhein0_UC2_FSP6``,
-        #.  If the simulation returned an error, add the <No.Ver> to the "Reduce" list and run ``main.py UC2/Acc_Oberrhein0_UC2_FSP6``,
-
-#.  For 6 FSPs (using the same GPU of google Colab, and numpy version):
-
-    #.  For <No.Ver> in [0,1,2,...19]:
-
-        #.  Open the json file under **scenarios/UC2/Acc_Oberrhein0_UC2_FSP6**.
-        #.  On the UseCase list of the Scenario settings set:  ``{"No.": 3, "Ver.": <No.Ver>, "FSPs": 6, "no_scenarios": 1, "Reduce": [2, 8, 9, 10, 12, 13, 18]}``
-        #.  Set the "max_volt_pu" in "scenario_settings" to 1.05,
-        #.  Set the "min_volt_pu" in "scenario_settings" to 0.95,
-        #.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_Oberrhein0_UC2_FSP6``,
-
-#.  For 7 FSPs (in different machines):
-
-    #.  For <No.Ver> in [0,1,2,...19]:
-
-        #.  Open the json file under **scenarios/UC2/Acc_Oberrhein0_UC2_FSP7**.
-        #.  On the UseCase list of the Scenario settings set:  ``{"No.": 3, "Ver.": <No.Ver>, "FSPs": 7, "no_scenarios": 1, "Reduce": []}``
-        #.  Set the "max_volt_pu" in "scenario_settings" to 1.05,
-        #.  Set the "min_volt_pu" in "scenario_settings" to 0.95,
-        #.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_Oberrhein0_UC2_FSP7``,
-        #.  If the simulation returned an error, add the <No.Ver> to the "Reduce" list and run ``main.py UC2/Acc_Oberrhein0_UC2_FSP7``,
-
-#.  For 7 FSPs (using the same GPU of google Colab, and numpy version):
-
-    #.  For <No.Ver> in [0,1,2,...19]:
-
-        #.  Open the json file under **scenarios/UC2/Acc_Oberrhein0_UC2_FSP7**.
-        #.  On the UseCase list of the Scenario settings set:  ``{"No.": 3, "Ver.": <No.Ver>, "FSPs": 7, "no_scenarios": 1, "Reduce": [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19]}``
-        #.  Set the "max_volt_pu" in "scenario_settings" to 1.05,
-        #.  Set the "min_volt_pu" in "scenario_settings" to 0.95,
-        #.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_Oberrhein0_UC2_FSP7``,
-
-
-.. image:: //../plots/UC2/Oberrhein0_speed_log.svg
+.. image:: plots/TensorConvolutionPlus2024-11-05_18-18-32.jpg
+  :width: 400
+.. image:: plots/TensorConvolutionPlus2024-11-08_14-38-25.jpg
   :width: 400
 
 
-#.  For <No.FSP> in [10,12,14] and wide voltage limitations:
+TensorConvolution+ can also simulate FAs with FSPs offering discrete setpoints of flexibility. For such scenarios, the input *non_linear_fsps* specifies which of the FSPs are non linear. The example line is:
 
-    #.  Open the json file under **scenarios/UC2/Acc_Oberrhein0_UC2**.
-    #.  On the UseCase list of the Scenario settings set:  ``{"No.": 3, "Ver.": 0, "FSPs": <No.FSP>, "no_scenarios": 20}``
-    #.  Set the "name" to ``"MC Oberrhein0 <No.FSP>FSPs 20"``,
-    #.  Set the "max_volt_pu" in "scenario_settings" to 1.1,
-    #.  Set the "min_volt_pu" in "scenario_settings" to 0.9,
-    #.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_Oberrhein0_UC2``,
+.. code-block:: console
 
+    TCP.tc_plus(net_name='CIGRE MV', fsp_load_indices=[3, 4, 5], dp=0.05, dq=0.1, fsp_dg_indices=[8], non_linear_fsps=[8])
 
-.. image:: //../plots/UC2/Oberrhein0W_speed_log.svg
+The resulting figure is:
+
+.. image:: plots/TensorConvolutionPlus2024-11-08_17-08-10.jpg
   :width: 400
 
+IV.E) TensorConvolution+ Merge
+---------------------------------------
+This section showcases the function merging FSPs using the TensorConvolution+ algorithm.
+For this functionality, the *max_fsps* input determines the maximum FSPs for which a network component can be sensitive before merging their flexibility.
+The example line is:
 
-*For the Ob1 network:*
-#.  For No.FSP in [2,3,4,5]:
+.. code-block:: console
 
-    #.  Open the json file under **scenarios/UC2/Acc_Oberrhein1_UC2**.
-    #.  On the UseCase list of the Scenario settings set:  ``{"No.": 3, "Ver.": 0, "FSPs": <No.FSP>, "no_scenarios": 20}``
-    #.  Set the "name" to ``"MC Oberrhein1 <No.FSP>FSPs 20"``,
-    #.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_Oberrhein1_UC2``,
+    TCP.tc_plus_merge(net_name='MV Oberrhein0', fsp_load_indices=[1, 2, 3], dp=0.025, dq=0.05, fsp_dg_indices=[1, 2, 3], max_fsps=5)
 
-#.  For 6 FSPs (in different machines):
+The resulting figure is:
 
-    #.  For <No.Ver> in [0,1,2,...19]:
-
-        #.  Open the json file under **scenarios/UC2/Acc_Oberrhein1_UC2_FSP6**.
-        #.  On the UseCase list of the Scenario settings set:  ``{"No.": 3, "Ver.": <No.Ver>, "FSPs": 6, "no_scenarios": 1, "Reduce": []}``
-        #.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_Oberrhein1_UC2_FSP6``,
-        #.  If the simulation returned an error, add the <No.Ver> to the "Reduce" list and run ``main.py UC2/Acc_Oberrhein1_UC2_FSP6``,
-
-#.  For 6 FSPs (using the same GPU of google Colab, and numpy version):
-
-    #.  For <No.Ver> in [0,1,2,...19]:
-
-        #.  Open the json file under **scenarios/UC2/Acc_Oberrhein1_UC2_FSP6**.
-        #.  On the UseCase list of the Scenario settings set:  ``{"No.": 3, "Ver.": <No.Ver>, "FSPs": 6, "no_scenarios": 1, "Reduce": []}``
-        #.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_Oberrhein1_UC2_FSP6``,
-
-#.  For 7 FSPs (in different machines):
-
-    #.  For <No.Ver> in [0,1,2,...19]:
-
-        #.  Open the json file under **scenarios/UC2/Acc_Oberrhein1_UC2_FSP7**.
-        #.  On the UseCase list of the Scenario settings set:  ``{"No.": 3, "Ver.": <No.Ver>, "FSPs": 7, "no_scenarios": 1, "Reduce": []}``
-        #.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_Oberrhein1_UC2_FSP7``,
-        #.  If the simulation returned an error, add the <No.Ver> to the "Reduce" list and run ``main.py UC2/Acc_Oberrhein1_UC2_FSP7``,
-
-#.  For 7 FSPs (using the same GPU of google Colab, and numpy version):
-
-    #.  For <No.Ver> in [0,1,2,...19]:
-
-        #.  Open the json file under **scenarios/UC2/Acc_Oberrhein1_UC2_FSP7**.
-        #.  On the UseCase list of the Scenario settings set:  ``{"No.": 3, "Ver.": <No.Ver>, "FSPs": 7, "no_scenarios": 1, "Reduce": []}``
-        #.  Run: ``python src/ScriptsForJournal/main.py UC2/Acc_Oberrhein1_UC2_FSP7``,
-
-.. image:: //../plots/UC2/Oberrhein1_speed_log.svg
+.. image:: plots/TensorConvolutionPlusMegeFSPs2024-11-08_17-13-06.jpg
   :width: 400
 
-For a CI scenario, run:
-#.  Run: ``python src/ScriptsForJournal/main.py UC2/LargeRadial``,
+IV.F) TensorConvolution+ Adapt
+---------------------------------------
+This section showcases the function storing information using the TensorConvolution+ algorithm, and then uses the stored information to adapt flexibility area for altered operating conditions.
+
+.. code-block:: console
+
+    # Define the consistent FSPs for the storing and adapting functions
+    fsp_load_indices = [1, 2, 3]
+    fsp_dg_indices = [1, 2, 3]
+
+    # Estimate the FA and store the relevant information for adaptation
+    TCP.tc_plus_save_tensors(net_name='MV Oberrhein0', fsp_load_indices=fsp_load_indices, dp=0.05, dq=0.1, fsp_dg_indices=fsp_dg_indices)
+
+    # Modify the network operating conditions
+    net, net_tmp = pn.mv_oberrhein(separation_by_sub=True)
+    net.load['sn_mva'] = list(net.load['p_mw'].pow(2).add(net.load['q_mvar'].pow(2)).pow(0.5))
+    net.load['scaling'] = [1 for i in range(len(net.load))]
+    net.sgen['scaling'] = [1 for i in range(len(net.sgen))]
+    net.switch['closed'] = [True for i in range(len(net.switch))]
+
+    net = fix_net(net) # This function is included in the appendix
+
+    rng = np.random.RandomState(212)
+
+    net, rng = rand_resample(net, fsp_load_indices, fsp_dg_indices, rng, 0.05, 0.01, 0.05, 0.01) # This function is also included in the appendix
+
+    # Adapt the FA using the locally stored information
+    TCP.tc_plus_adapt(net=net, fsp_load_indices=fsp_load_indices, fsp_dg_indices=fsp_dg_indices)
+
+    # Estimate the FA without adapting to compare with the above adapted result
+    TCP.tc_plus(net=net, fsp_load_indices=fsp_load_indices, fsp_dg_indices=fsp_dg_indices, dp=0.05, dq=0.1)
 
 
-.. image:: //../plots/UC2/Conv_multi_Conv_LargeRadial.svg
+The resulting figures for the stored, adapted and validated flexibility areas are:
+
+
+.. image:: plots/TensorConvolutionPlusStore2024-11-08_17-44-24.jpg
+  :width: 400
+.. image:: plots/TensorConvolutionPlusAdapt2024-11-08_17-59-04.jpg
+  :width: 400
+.. image:: plots/TensorConvolutionPlus2024-11-08_17-59-28.jpg
   :width: 400
 
-IV.C) Disjoint Flexibility Areas
----------------------------------
-The scenario for the journal's use case included:
-
-#.  The **MC_Discontinuous.json** file, by running: ``python src/ScriptsForJournal/main.py UC3/MC_Discontinuous``
-#.  The **Conv_Discontinuous.json** file, by running: ``python src/ScriptsForJournal/main.py UC3/Conv_Discontinuous``
-
-The first json file runs the PF-based results, the second file runs the TensorConvolution+ algorithm to
-generate the results.
-
-If needed to avoid re-estimating the FAs, the results from the first two json files are in the **csv_results/UC3** folder.
-
-Example figures generated for these scenarios are in the folder **plots/UC3**
-
-.. image:: //../plots/UC3/Disc_Scenario_121416012388_incl_infeasible.svg
-  :width: 400
-.. image:: //../plots/UC3/Conv_multi_Conv_Conv_Discontinuous.svg
-  :width: 400
-
-IV.D) Uncertainty Estimation for Small FSPs
--------------------------------------------
-The scenario for the journal's use case included:
-
-#.  The **Uncertainty_Conv.json** file, by running: ``python src/ScriptsForJournal/main.py UC4/Uncertainty_Conv``
-
-The json file runs the TensorConvolution+ algorithm to
-generate the results.
-
-If needed to avoid re-estimating the FAs, the results are in the **csv_results/UC4** folder.
-
-Example figure generated for the scenario is in the folder **plots/UC4**
-
-.. image:: //../plots/UC4/Uncertainty_Interpreted.png
-  :width: 400
-
-
-IV.E) Adaptability
----------------------------------
-The scenario for the journal's use case included:
-
-
-#.  For the initial operating conditions of Ob0 (without saving tensors):
-
-    #.  Open the json file under **scenarios/UC5/InitAdaptSaveOb0**.
-    #.  On the Scenario settings set:  ``"save_tensors": false,``
-    #.  Set the name to: ``"name": "UC5/NoSaveTsOb0",``
-    #.  Run: ``python src/ScriptsForJournal/main.py UC2/InitAdaptSaveOb0``,
-
-#.  For the initial operating conditions of Ob0 (with saving tensors):
-
-    #.  Open the json file under **scenarios/UC5/InitAdaptSaveOb0**.
-    #.  On the Scenario settings set:  ``"save_tensors": true,``
-    #.  Set the name to: ``"name": "UC5/SaveTsOb0",``
-    #.  Run: ``python src/ScriptsForJournal/main.py UC2/InitAdaptSaveOb0``,
-
-#.  For the adapted operating conditions of Ob0 (without loading tensors):
-
-    #.  Open the json file under **scenarios/UC5/ResAdaptOb0**.
-    #.  On the Scenario settings set:  ``"adapt": false,``
-    #.  Set the name to: ``"name": "UC5/NoLoadTsOb0",``
-    #.  Run: ``python src/ScriptsForJournal/main.py UC2/ResAdaptOb0``,
-
-#.  For the adapted operating conditions of Ob0 (with loading tensors):
-
-    #.  Open the json file under **scenarios/UC5/ResAdaptOb0**.
-    #.  On the Scenario settings set:  ``"adapt": true,``
-    #.  Set the name to: ``"name": "UC5/LoadTsOb0",``
-    #.  Run: ``python src/ScriptsForJournal/main.py UC2/ResAdaptOb0``,
-
-Example results from the above files can be found in the **csv_results/UC5** folder.
-Example plots, for the first two results are:
-
-.. image:: //../plots/UC5/TCP_Conv_SaveTsOb0.svg
-  :width: 400
-
-The plots, for the 3rd results are:
-
-.. image:: //../plots/UC5/TCP_Conv_NoLoadFlexOb0.svg
-  :width: 400
-
-The plots, for the 4th results are:
-
-.. image:: //../plots/UC5/TCP_Conv_LoadFlexOb0.svg
-  :width: 400
-
-#.  For the initial operating conditions of CI (without saving tensors):
-
-    #.  Open the json file under **scenarios/UC5/InitAdaptSave**.
-    #.  On the Scenario settings set:  ``"save_tensors": false,``
-    #.  Set the name to: ``"name": "UC5/NoSaveTs",``
-    #.  Run: ``python src/ScriptsForJournal/main.py UC2/InitAdaptSave``,
-
-#.  For the initial operating conditions of CI (with saving tensors):
-
-    #.  Open the json file under **scenarios/UC5/InitAdaptSave**.
-    #.  On the Scenario settings set:  ``"save_tensors": true,``
-    #.  Set the name to: ``"name": "UC5/SaveTs",``
-    #.  Run: ``python src/ScriptsForJournal/main.py UC2/InitAdaptSave``,
-
-#.  For the adapted operating conditions of CI (without loading tensors):
-
-    #.  Open the json file under **scenarios/UC5/ResAdapt**.
-    #.  On the Scenario settings set:  ``"adapt": false,``
-    #.  Set the name to: ``"name": "UC5/NoLoadTs",``
-    #.  Run: ``python src/ScriptsForJournal/main.py UC2/ResAdapt``,
-
-#.  For the adapted operating conditions of CI (with loading tensors):
-
-    #.  Open the json file under **scenarios/UC5/ResAdapt**.
-    #.  On the Scenario settings set:  ``"adapt": true,``
-    #.  Set the name to: ``"name": "UC5/LoadTs",``
-    #.  Run: ``python src/ScriptsForJournal/main.py UC2/ResAdapt``,
-
-Example results from the above files can be found in the **csv_results/UC5** folder.
-Example plots, for the first two results are:
-
-.. image:: //../plots/UC5/TCP_Conv_SaveFaTs.svg
-  :width: 400
-
-The plots, for the 3rd results are:
-
-.. image:: //../plots/UC5/TCP_Conv_NoLoadTs_ax.svg
-  :width: 400
-
-Example plots, for the 4th results are:
-
-.. image:: //../plots/UC5/TCP_Conv_LoadTs_ax.svg
-  :width: 400
-
-
-IV.F) Case study for DFC
--------------------------------------------
-The scenario for the journal's use case included:
-
-#.  The **Info.json** file, by running: ``python src/ScriptsForJournal/main.py UC6/Info``
-
-The json file runs the TensorConvolution+ algorithm to
-generate the results.
-
-If needed to avoid re-estimating the FAs, the results are in the **csv_results/UC6** folder.
-
-Example figures generated for the scenario are in the folder **plots/UC6**
-
-.. image:: //../plots/UC6/feas_mat.svg
-  :width: 250
-
-.. image:: //../plots/UC6/heat_mat.svg
-  :width: 250
-
-.. image:: //../plots/UC6/min_cmat.svg
-  :width: 250
-
-.. image:: //../plots/UC6/nflex_mat.svg
-  :width: 250
-
-The json files run the TensorConvolution+ algorithm to
-generate the results.
-
-
-IV.G) Case study for OPFs
--------------------------------------------
-The scenario for the journal's use case included:
-
-For each of the dp, dq, opf_step specified in the journal:
-    #.  Open the json file under **scenarios/UC7/TCP**.
-    #.  On the Scenario settings set:  ``"dp": dp,``
-    #.  On the Scenario settings set:  ``"dq": dq,``
-    #.  On the Scenario settings set:  ``"opf_step": opf_step,``
-    #.  Run: ``python src/ScriptsForJournal/main.py UC7/TCP``,
-
-Example figure generated for this scenario is in the folder **plots/UC7**
-
-.. image:: //../plots/UC7/OPF_.svg
-  :width: 500
 

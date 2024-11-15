@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import time
 import torch
-from utils import tensor_convolve_nd_torch, tensor_convolve_nd_torch_half, fix_missing_point
+from .utils import tensor_convolve_nd_torch, tensor_convolve_nd_torch_half, fix_missing_point
 import pandapower as pp
 import pandas as pd
 from tqdm import tqdm
@@ -2216,7 +2216,9 @@ def run_all_tensor_flex_areas(net, pq_profiles, bus_nm, line_nm, trafo_nm, init_
                     tmp_dict[nm] = float(net.res_line['loading_percent'].iloc[i]-init_load[nm])
                 for i, nm in enumerate(trafo_nm):
                     tmp_dict[nm] = float(net.res_trafo['loading_percent'].iloc[i]-init_load[nm])
-                result_dict[key] = result_dict[key].append(tmp_dict, ignore_index=True)
+                new_df_row = pd.DataFrame(tmp_dict, index=[0])
+                result_dict[key] = pd.concat([new_df_row, result_dict[key].loc[:]]).reset_index(drop=True)
+                #result_dict[key] = result_dict[key].append(tmp_dict, ignore_index=True)
             except:
                 print(f"Power flow did not converge for profile {profile}")
         net = update_conv_pqs(net, fsp_idx=fsp_idx, fsp_type=fsp_type, profile=pq_profiles[key][0])

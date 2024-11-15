@@ -40,6 +40,7 @@ def plot_opf_res(filename, init_pq, text):
     for idx, i in enumerate(list(res_pqs[:, 2])):
         sgns_lsts[int(i)].append(idx)
     res_pqs = res_pqs[:, :2]
+    plt.figure()
     if len(res_pqs) > 0:
         try:
             hull = ConvexHull(res_pqs)
@@ -59,6 +60,7 @@ def plot_opf_res(filename, init_pq, text):
     with open(f'./{filename}.txt', 'w') as f:
         f.write(text+f'\nFigure axis limits: x =[{xmin}, {xmax}], y=[{ymin}, {ymax}]')
     plt.savefig(f'./{filename}.pdf', bbox_inches='tight', pad_inches=0.5, dpi=500)
+    plt.close()
     return
 
 
@@ -385,6 +387,7 @@ def plot_feasible_and_infeasible(x_flexible, y_flexible, x_non_flexible, y_non_f
         f.write(text+f'\nFigure axis limits: x =[{xmin}, {xmax}], y=[{ymin}, {ymax}]')
     fig.savefig(loc + scenario_name + '_incl_infeasible.pdf', bbox_inches='tight', pad_inches=0.5, dpi=500,
                 format='pdf')
+    plt.close()
     return
 
 
@@ -421,6 +424,7 @@ def plot_only_feasible(x_flexible, y_flexible, operating_point, scenario_name, l
     plt.grid()
     print(f"Saving figure at: "+loc+scenario_name+'.pdf')
     fig.savefig(loc+scenario_name+'.pdf', bbox_inches='tight', pad_inches=0.5, dpi=500, format='pdf')
+    plt.close()
     return
 
 
@@ -502,6 +506,7 @@ def plot_multi_convolution(filename: str, inf, q_loc, p_loc, text, loc=''):
                      f'y=[{list(df[df.columns[-1]])[0]}, {list(df[df.columns[-1]])[-1]}]')
 
     plt.savefig(f'./{filename}.pdf', bbox_inches='tight', pad_inches=0.5, dpi=500)
+    plt.close()
     return
 
 
@@ -533,6 +538,7 @@ def get_uncertainty(df, name='', plot_type='jpg'):
     plt.tight_layout()
     print(f'Plotting small FSPs at: Uncertainty'+name+'.'+plot_type)
     fig.savefig('Uncertainty'+name+'.'+plot_type, bbox_inches='tight', pad_inches=0.5, dpi=500)
+    plt.close()
     return
 
 
