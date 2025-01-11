@@ -1,0 +1,9 @@
+    -Preparation = 0.0009665489196777344s,
+    -Power Flows = 12.543075561523438s,
+    -Net. Component vs FSP dictionary = 0.298872709274292s,
+    -Small FSPs = 0.0s,
+    -Effective FSPs per Component = 0.0s,
+    -Removal Safe Components = 0.0s,
+    -(Tensor & 2D) Convolutions = 1.1038603782653809s,
+    -Applying Axes and Init Point = 0.0004963874816894531s,
+    -Small FSP Uncertainty calculation = 0.0s
