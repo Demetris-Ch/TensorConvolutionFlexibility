@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.2
 Name: TensorConvolutionPlus
-Version: 0.1.3
+Version: 0.1.0
 Summary: A package for TensorConvolution+ distribution network aggregated flexibility area estimation
 Author-email: Demetris Chrysostomou <d.chrysostomou@tudelft.nl>
 Project-URL: Homepage, https://github.com/Demetris-Ch/TensorConvolutionFlexibility
@@ -30,6 +30,12 @@ Usage
 ---------------
 I. Reference
 ---------------
+
+The package documentation preprint is currently available in ArXiv under:
+
+[![DOI](https://doi.org/10.1109/TSG.2024.3453667)
+
+Available at: https://ieeexplore.ieee.org/document/10663439
 
 The TensorConvolution+ algorithm was published in IEEE Transactions on Smart Grid and can be read and referenced using:
 

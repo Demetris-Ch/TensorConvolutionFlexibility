@@ -1,0 +1,11 @@
+Duration distribution: 
+    -Preparation=0.005602359771728516s,
+    -Power Flows=2.186305046081543s,
+    -Net. Component vs FSP dictionary=0.7626755237579346s,
+    -Small FSPs=0.0s,
+    -Effective FSPs per Component=0.0019872188568115234s,
+    -Removal Safe Components=0.000997304916381836s,
+    -(Tensor & 2D) Convolutions=0.39101743698120117s,
+    -Applying Axes and Init Point=0.001253366470336914s,
+    -Small FSP Uncertainty calculation=0.0s
+Figure axis limits: x =[18.160632074363004, 19.110632074363018], y=[5.70712118606329, 7.607121186063283]

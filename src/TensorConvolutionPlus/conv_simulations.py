@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import time
 import torch
-from .utils import tensor_convolve_nd_torch, tensor_convolve_nd_torch_half, fix_missing_point
+from utils import tensor_convolve_nd_torch, tensor_convolve_nd_torch_half, fix_missing_point
 import pandapower as pp
 import pandas as pd
 from tqdm import tqdm
@@ -711,7 +711,7 @@ def torch_tensor_conv_simulations(net, pq_profiles, dp, dq, init_pcc_pq, small_f
 
     q_index, _ = find_value_close2list(q_axis, float(init_pcc_pq[1]))
     p_index, _ = find_value_close2list(p_axis, float(init_pcc_pq[0]))
-    conv_total.loc[q_axis[q_index], p_axis[p_index]] = 2
+    #conv_total.loc[q_axis[q_index], p_axis[p_index]] = 2
     t7_e = time.time()
     if small_fsp_prof:
         scaled_uncertain, safe_area, uncertain_ones_fa, uncert_p_axs, uncert_q_axs = \
@@ -735,7 +735,8 @@ def torch_tensor_conv_simulations(net, pq_profiles, dp, dq, init_pcc_pq, small_f
         f"\n    -Net. Component vs FSP dictionary={t3_e-t2_e}s,\n    -Small FSPs={t2_e-t1_e}s," +\
         f"\n    -Effective FSPs per Component={t4_e-t3_e}s," +\
         f"\n    -Removal Safe Components={t5_e-t4_e}s,\n    -(Tensor & 2D) Convolutions={t6_e-t5_e}s,\n" +\
-        f"    -Applying Axes and Init Point={t7_e-t6_e}s,\n    -Small FSP Uncertainty calculation={t8_e-t7_e}s"
+        f"    -Applying Axes and Init Point={t7_e-t6_e}s,\n    -Small FSP Uncertainty calculation={t8_e-t7_e}s,\n"+ \
+        f"    -Total={t8_e-t0_s}"
     return conv_total, discrete_conv, continuous_conv, inf, ones_conv, q_index, p_index, dur_str, extra
 
 
@@ -899,7 +900,7 @@ def torch_tensor_conv_large_simulations(net, pq_profiles, dp, dq, init_pcc_pq, s
     conv_total = pd.DataFrame(final_flex, index=q_axis, columns=p_axis)
     q_index, _ = find_value_close2list(q_axis, float(init_pcc_pq[1]))
     p_index, _ = find_value_close2list(p_axis, float(init_pcc_pq[0]))
-    conv_total.loc[q_axis[q_index], p_axis[p_index]] = 2
+    #conv_total.loc[q_axis[q_index], p_axis[p_index]] = 2
     t7_e = time.time()
     if small_fsp_prof:
         scaled_uncertain, safe_area, uncertain_ones_fa, uncert_p_axs, uncert_q_axs = \
@@ -923,7 +924,9 @@ def torch_tensor_conv_large_simulations(net, pq_profiles, dp, dq, init_pcc_pq, s
         f"\n    -Net. Component vs FSP dictionary={t2_e-t1_e}s,\n    -Small FSPs={t3_e-t2_e}s," +\
         f"\n    -Effective FSPs per Component={t4_e-t3_e}s," +\
         f"\n    -Removal Safe Components={t5_e-t4_e}s,\n    -(Tensor & 2D) Convolutions={t6_e-t5_e}s,\n" +\
-        f"    -Applying Axes and Init Point={t7_e-t6_e}s,\n    -Small FSP Uncertainty calculation={t8_e-t7_e}s,"
+        f"    -Applying Axes and Init Point={t7_e-t6_e}s,\n    -Small FSP Uncertainty calculation={t8_e-t7_e}s,\n"+\
+        f"    -Total={t8_e-t0_s}"
+
     return conv_total, discrete_conv, continuous_conv, inf, ones_conv, q_index, p_index, dur_str
 
 
@@ -1119,7 +1122,7 @@ def numpy_tensor_conv_simulations_with_delta(net, pq_profiles, dp, dq, init_pcc_
 
     q_index, _ = find_value_close2list(q_axis, float(init_pcc_pq[1]))
     p_index, _ = find_value_close2list(p_axis, float(init_pcc_pq[0]))
-    conv_total.loc[q_axis[q_index], p_axis[p_index]] = 2
+    #conv_total.loc[q_axis[q_index], p_axis[p_index]] = 2
     t7_e = time.time()
     if small_fsp_prof:
         assert Warning, "Warning: Simultaneous Uncertainty and Discontinuity currently not supported"
@@ -1128,7 +1131,8 @@ def numpy_tensor_conv_simulations_with_delta(net, pq_profiles, dp, dq, init_pcc_
           f"\n    -Net. Component vs FSP dictionary = {t2_e-t1_e}s,\n    -Small FSPs = {t3_e-t2_e}s,"\
           f"\n    -Effective FSPs per Component = {t4_e-t3_e}s,"\
           f"\n    -Removal Safe Components = {t5_e-t4_e}s,\n    -(Tensor & 2D) Convolutions = {t6_e-t5_e}s,\n"\
-          f"    -Applying Axes and Init Point = {t7_e-t6_e}s,\n    -Small FSP Uncertainty calculation = {t8_e-t7_e}s"
+          f"    -Applying Axes and Init Point = {t7_e-t6_e}s,\n    -Small FSP Uncertainty calculation = {t8_e-t7_e}s,\n" +\
+        f"    -Total={t8_e-t0_s}"
     return conv_total, None, None, inf, q_index, p_index, dur_str
 
 
@@ -1291,7 +1295,7 @@ def numpy_tensor_conv_simulations_saving(net, pq_profiles, dp, dq, init_pcc_pq, 
 
     q_index, _ = find_value_close2list(q_axis, float(init_pcc_pq[1]))
     p_index, _ = find_value_close2list(p_axis, float(init_pcc_pq[0]))
-    conv_total.loc[q_axis[q_index], p_axis[p_index]] = 2
+    #conv_total.loc[q_axis[q_index], p_axis[p_index]] = 2
     t7_e = time.time()
     if small_fsp_prof:
         assert Warning, "Warning: Not yet implemented"
@@ -1409,7 +1413,7 @@ def adaptable_new_op(net, init_pcc_pq, minmax_v=[0.95, 1.05], max_l=100):
     conv_total = pd.DataFrame(final_flex, index=q_axis, columns=p_axis)
     q_index, _ = find_value_close2list(q_axis, float(init_pcc_pq[1]))
     p_index, _ = find_value_close2list(p_axis, float(init_pcc_pq[0]))
-    conv_total.loc[q_axis[q_index], p_axis[p_index]] = 2
+    #conv_total.loc[q_axis[q_index], p_axis[p_index]] = 2
     t7_e = time.time()
     t8_e = time.time()
     dur_str = f"Duration distribution: \n    -Preparation = {t0_e - t0_s}s,\n    -Load Data = {t2_e - t0_e}s,\n"\

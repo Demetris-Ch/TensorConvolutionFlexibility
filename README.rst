@@ -6,6 +6,12 @@ Usage
 I. Reference
 ---------------
 
+The package documentation preprint is currently available in ArXiv under:
+
+[![DOI](https://doi.org/10.1109/TSG.2024.3453667)
+
+Available at: https://ieeexplore.ieee.org/document/10663439
+
 The TensorConvolution+ algorithm was published in IEEE Transactions on Smart Grid and can be read and referenced using:
 
 [![DOI](https://doi.org/10.1109/TSG.2024.3453667)

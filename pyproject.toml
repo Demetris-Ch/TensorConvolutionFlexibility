@@ -11,7 +11,7 @@ include-package-data = true
 
 [project]
 name = "TensorConvolutionPlus"
-version = "0.1.3"
+version = "0.1.0"
 authors = [
   { name="Demetris Chrysostomou", email="d.chrysostomou@tudelft.nl" },
 ]

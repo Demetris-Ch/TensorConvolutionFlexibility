@@ -1,8 +1,14 @@
+import time
+
 from TensorConvolutionPlus import FA_Estimator as TCP
+import TensorConvolutionPlus
 import pandapower.networks as pn
 import pandapower as pp
 import numpy as np
+from importlib.metadata import version
 
+#print(version('TensorConvolutionPlus'))
+#time.sleep(199)
 
 def rand_resample(net, no_change_loads, no_change_dgs, rng, std_cap_l, std_pf_l, std_cap_dg, std_pf_dg):
     """ Randomly sample Operating Condition shift for adaptability case study
@@ -146,7 +152,8 @@ if __name__ == "__main__":
 
     #TCP.opf(net_name='CIGRE MV', opf_step=0.1, fsp_load_indices=[1, 4, 9], fsp_dg_indices=[8])
 
-    TCP.tc_plus(net_name='MV Oberrhein0', fsp_load_indices=[1, 2, 3], dp=0.05, dq=0.1, fsp_dg_indices=[1, 2, 3])
+
+    TCP.tc_plus(net_name='MV Oberrhein0', fsp_load_indices=[1, 2], dp=0.05, dq=0.1, fsp_dg_indices=[1, 2])
 
     #TCP.tc_plus(net_name='MV Oberrhein0', fsp_load_indices=[1, 2], dp=0.05, dq=0.1, fsp_dg_indices=[1, 2], flex_shape='PQmax')
 

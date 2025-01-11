@@ -2,7 +2,7 @@
 import pandapower.networks as pn
 import numpy as np
 import pandapower as pp
-from .utils import update_pqs, fix_net, check_limits_bool
+from utils import update_pqs, fix_net, check_limits_bool
 import logging
 logging.getLogger("pandapower").setLevel(logging.ERROR)
 

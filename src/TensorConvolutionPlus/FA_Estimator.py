@@ -1,13 +1,13 @@
-from .json_reader import SettingReader
-from .scenario_setup import update_settings, apply_cs, get_operating_point
-from .data_sampler import profile_creation, conv_profile_creation, profile_creation_bf, conv_profile_creation_sq
-from .conv_simulations import numpy_tensor_conv_simulations_with_delta, torch_tensor_conv_simulations, \
+from json_reader import SettingReader
+from scenario_setup import update_settings, apply_cs, get_operating_point
+from data_sampler import profile_creation, conv_profile_creation, profile_creation_bf, conv_profile_creation_sq
+from conv_simulations import numpy_tensor_conv_simulations_with_delta, torch_tensor_conv_simulations, \
     adaptable_new_op, numpy_tensor_conv_simulations_saving, torch_tensor_conv_large_simulations
-from .utils import write_conv_result, write_result, assert_limits
-from .plotting import plot_multi_convolution, get_uncertainty_interpret, plot_mc, plot_opf_res
-from .monte_carlo import all_pf_simulations
+from utils import write_conv_result, write_result, assert_limits
+from plotting import plot_multi_convolution, get_uncertainty_interpret, plot_mc, plot_opf_res
+from monte_carlo import all_pf_simulations
 from datetime import datetime
-from .opf import opf_fa_pck
+from opf import opf_fa_pck
 import networkx as nx
 import pandapower as pp
 import logging
@@ -109,7 +109,7 @@ def tc_plus(net = None, net_name: str = 'MV Oberrhein0', dp: float = 0.05, dq: f
         if len(net.ext_grid) > 1:
             egid = 1
             assert Warning, "Currently the algorithm only works for a single PCC/External grid. " \
-                           "Assuming external grid 1 as PCC."
+                            "Assuming external grid 1 as PCC."
         else:
             egid = 0
         pcc_operating_point = [net.res_ext_grid['p_mw'].iloc[egid], net.res_ext_grid['q_mvar'].iloc[egid]]
