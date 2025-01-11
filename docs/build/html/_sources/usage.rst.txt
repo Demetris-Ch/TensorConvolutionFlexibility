@@ -5,7 +5,7 @@ Usage
 ---------------
 I. Reference
 ---------------
-The package has been submitted in SoftwareX and is currently available in ArXiv under:
+The package documentation preprint is currently available in ArXiv under:
 
 [![DOI](https://doi.org/10.1109/TSG.2024.3453667)
 

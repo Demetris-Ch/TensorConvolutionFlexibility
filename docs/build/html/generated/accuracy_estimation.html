@@ -14,13 +14,11 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=f2a433a1"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="conv_simulations" href="conv_simulations.html" />
-    <link rel="prev" title="API" href="../api.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,22 +40,9 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">accuracy_estimation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conv_simulations.html">conv_simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_sampler.html">data_sampler</a></li>
-<li class="toctree-l2"><a class="reference internal" href="json_reader.html">json_reader</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html">main</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FA_Estimator.html">FA_Estimator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="monte_carlo.html">monte_carlo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plotting.html">plotting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scenario_setup.html">scenario_setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opf.html">opf</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html">utils</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
 </ul>
 
         </div>
@@ -74,7 +59,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../api.html">API</a></li>
       <li class="breadcrumb-item active">accuracy_estimation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/generated/accuracy_estimation.rst.txt" rel="nofollow"> View page source</a>
@@ -90,37 +74,37 @@
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">accuracy_brute_force</span></code>(ground_truth_file, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.accuracy_brute_force" title="accuracy_estimation.accuracy_brute_force"><code class="xref py py-obj docutils literal notranslate"><span class="pre">accuracy_brute_force</span></code></a>(ground_truth_file, ...)</p></td>
 <td><p>Calculate and print mean squared error (MSE) for feasible and total points.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">correct_feasible_and_infeasible</span></code>(...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.correct_feasible_and_infeasible" title="accuracy_estimation.correct_feasible_and_infeasible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">correct_feasible_and_infeasible</span></code></a>(...)</p></td>
 <td><p>Evaluate the feasibility of points.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extend_feasible_and_infeasible</span></code>(...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.extend_feasible_and_infeasible" title="accuracy_estimation.extend_feasible_and_infeasible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extend_feasible_and_infeasible</span></code></a>(...)</p></td>
 <td><p>Extend the feasible and infeasible regions for visualization.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_value_close2list</span></code>(lst, voi)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.find_value_close2list" title="accuracy_estimation.find_value_close2list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_value_close2list</span></code></a>(lst, voi)</p></td>
 <td><p>Find the index and closest value in a list to a specified value.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_heatmap_matrix</span></code>(x_flex, y_flex, step_p, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.get_heatmap_matrix" title="accuracy_estimation.get_heatmap_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_heatmap_matrix</span></code></a>(x_flex, y_flex, step_p, ...)</p></td>
 <td><p>Generate a heatmap matrix based on provided coordinates.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_inf_matrix</span></code>(x_flex, y_flex, step_p, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.get_inf_matrix" title="accuracy_estimation.get_inf_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_inf_matrix</span></code></a>(x_flex, y_flex, step_p, ...)</p></td>
 <td><p>Generate the non-feasible space matrix based on provided data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_info_matrix</span></code>(x_flex, y_flex, x_nflex, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.get_info_matrix" title="accuracy_estimation.get_info_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_info_matrix</span></code></a>(x_flex, y_flex, x_nflex, ...)</p></td>
 <td><p>Get information for the case study &quot;DFC Improving TSOs Flexibility Shift Selection&quot;.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">info_options</span></code>(x_flexible, x_non_flexible, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.info_options" title="accuracy_estimation.info_options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">info_options</span></code></a>(x_flexible, x_non_flexible, ...)</p></td>
 <td><p>This function plots and prints information for the case study 'DFC Improving TSOs Flexibility Shift Selection'.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">loop_acc</span></code>(ground_truth, conv_results, inf)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.loop_acc" title="accuracy_estimation.loop_acc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loop_acc</span></code></a>(ground_truth, conv_results, inf)</p></td>
 <td><p>Calculate and return accuracy metrics for UC2 scenarios.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_results</span></code>(ground_truth, conv_results, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.plot_results" title="accuracy_estimation.plot_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_results</span></code></a>(ground_truth, conv_results, ...)</p></td>
 <td><p>Generate a visualization of feasible and infeasible regions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">range_acc_case_study</span></code>(net, settings, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.range_acc_case_study" title="accuracy_estimation.range_acc_case_study"><code class="xref py py-obj docutils literal notranslate"><span class="pre">range_acc_case_study</span></code></a>(net, settings, ...)</p></td>
 <td><p>Run some simulations for range accuracy case study.</p></td>
 </tr>
 </tbody>
@@ -130,10 +114,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../api.html" class="btn btn-neutral float-left" title="API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="conv_simulations.html" class="btn btn-neutral float-right" title="conv_simulations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

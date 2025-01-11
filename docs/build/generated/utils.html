@@ -14,12 +14,11 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=f2a433a1"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="opf" href="opf.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,22 +40,9 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="accuracy_estimation.html">accuracy_estimation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conv_simulations.html">conv_simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_sampler.html">data_sampler</a></li>
-<li class="toctree-l2"><a class="reference internal" href="json_reader.html">json_reader</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html">main</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FA_Estimator.html">FA_Estimator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="monte_carlo.html">monte_carlo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plotting.html">plotting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scenario_setup.html">scenario_setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opf.html">opf</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">utils</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
 </ul>
 
         </div>
@@ -73,7 +59,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../api.html">API</a></li>
       <li class="breadcrumb-item active">utils</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/generated/utils.rst.txt" rel="nofollow"> View page source</a>
@@ -89,73 +74,73 @@
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">assert_limits</span></code>(net, settings)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.assert_limits" title="utils.assert_limits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assert_limits</span></code></a>(net, settings)</p></td>
 <td><p>Check that the network operates within the operation limits and assert an error if not</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_limits</span></code>(net, settings)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#utils.check_limits" title="utils.check_limits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_limits</span></code></a>(net, settings)</p></td>
 <td><p>Check that the network operates within the operation limits and print it</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_limits_bool</span></code>(net, settings)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.check_limits_bool" title="utils.check_limits_bool"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_limits_bool</span></code></a>(net, settings)</p></td>
 <td><p>Check that the network operates within the operation limits and return True(feasible)/False(not feasible)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_line_current_limits</span></code>(net[, upper_limit])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#utils.check_line_current_limits" title="utils.check_line_current_limits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_line_current_limits</span></code></a>(net[, upper_limit])</p></td>
 <td><p>Check if the power flow result on the network caused respects the loading limitations in all lines</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_trafo_current_limits</span></code>(net[, upper_limit])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.check_trafo_current_limits" title="utils.check_trafo_current_limits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_trafo_current_limits</span></code></a>(net[, upper_limit])</p></td>
 <td><p>Check if the power flow result on the network caused respects the loading limitations in all transformers</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_voltage_limits</span></code>(voltages, upper_limit, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#utils.check_voltage_limits" title="utils.check_voltage_limits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_voltage_limits</span></code></a>(voltages, upper_limit, ...)</p></td>
 <td><p>Check if the power flow result on the network caused respects the voltage limitations in all lines</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_result_df</span></code>(x_flexible, x_non_flexible, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.create_result_df" title="utils.create_result_df"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_result_df</span></code></a>(x_flexible, x_non_flexible, ...)</p></td>
 <td><p>Sve Monte Carlo simulation result on the folder :param x_flexible: feasible P, :type x_flexible: list of floats</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fix_missing_point</span></code>(mat)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#utils.fix_missing_point" title="utils.fix_missing_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fix_missing_point</span></code></a>(mat)</p></td>
 <td><p>Filter in case the sampling of FSP shifts was wrong and left a point behind, it is observed in the power flow</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fix_missing_pointsv2</span></code>(mat)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.fix_missing_pointsv2" title="utils.fix_missing_pointsv2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fix_missing_pointsv2</span></code></a>(mat)</p></td>
 <td><p>Filter in case the sampling of FSP shifts was wrong and left a point behind, it is observed in the power flow</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fix_net</span></code>(net)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#utils.fix_net" title="utils.fix_net"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fix_net</span></code></a>(net)</p></td>
 <td><p>Fix the initial network structure</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_input_busses_pq</span></code>(net, input_buses)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.get_input_busses_pq" title="utils.get_input_busses_pq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_input_busses_pq</span></code></a>(net, input_buses)</p></td>
 <td><p>Get P and Q of all bus indices in {input_buses} list</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_input_busses_v</span></code>(net, input_buses)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#utils.get_input_busses_v" title="utils.get_input_busses_v"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_input_busses_v</span></code></a>(net, input_buses)</p></td>
 <td><p>Get voltage magnitude v and angle θ of all bus indices in {input_buses} list</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_input_lines_pq</span></code>(net, input_lines)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.get_input_lines_pq" title="utils.get_input_lines_pq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_input_lines_pq</span></code></a>(net, input_lines)</p></td>
 <td><p>Get P and Q of all line indices in {input_lines} list</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">kumaraswamymontecarlo</span></code>(a, b, c, LB, UB, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#utils.kumaraswamymontecarlo" title="utils.kumaraswamymontecarlo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kumaraswamymontecarlo</span></code></a>(a, b, c, LB, UB, ...)</p></td>
 <td><p>Create samples using the Kumaraswamy Monte Carlo distribution</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tensor_convolve_nd_torch</span></code>(image, kernel)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.tensor_convolve_nd_torch" title="utils.tensor_convolve_nd_torch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tensor_convolve_nd_torch</span></code></a>(image, kernel)</p></td>
 <td><p>Apply tensor convolution</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tensor_convolve_nd_torch_half</span></code>(image, kernel)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#utils.tensor_convolve_nd_torch_half" title="utils.tensor_convolve_nd_torch_half"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tensor_convolve_nd_torch_half</span></code></a>(image, kernel)</p></td>
 <td><p>Apply tensor convolution, but with float32 types (might run into issues exceeding the maximum number)</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_pqs</span></code>(net[, flex_wt, flex_pv, profile, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.update_pqs" title="utils.update_pqs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_pqs</span></code></a>(net[, flex_wt, flex_pv, profile, ...])</p></td>
 <td><p>Update network DG FSP P,Q based on the input values</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_pqs2</span></code>(net[, flex_dg, profile])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#utils.update_pqs2" title="utils.update_pqs2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_pqs2</span></code></a>(net[, flex_dg, profile])</p></td>
 <td><p>Update network DG FSP P,Q based on the input profile</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_pqs_wl</span></code>(net[, flex_wt, flex_pv, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.update_pqs_wl" title="utils.update_pqs_wl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_pqs_wl</span></code></a>(net[, flex_wt, flex_pv, ...])</p></td>
 <td><p>Update network FSP P,Q including loads based on the input values</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_pqs_wl2</span></code>(net, profile[, load_ind, dg_ind])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#utils.update_pqs_wl2" title="utils.update_pqs_wl2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_pqs_wl2</span></code></a>(net, profile[, load_ind, dg_ind])</p></td>
 <td><p>Update load and distributed generator output values.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_pqs_wl2_aliander</span></code>(net, profile[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.update_pqs_wl2_aliander" title="utils.update_pqs_wl2_aliander"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_pqs_wl2_aliander</span></code></a>(net, profile[, ...])</p></td>
 <td><p>Update PQ values using Aliander's PGM</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_conv_result</span></code>(df, name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#utils.write_conv_result" title="utils.write_conv_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_conv_result</span></code></a>(df, name)</p></td>
 <td><p>Write results from convolution simulations</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_result</span></code>(x_flexible, x_non_flexible, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#utils.write_result" title="utils.write_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_result</span></code></a>(x_flexible, x_non_flexible, ...)</p></td>
 <td><p>Sve Monte Carlo simulation result on the folder</p></td>
 </tr>
 </tbody>
@@ -165,9 +150,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="opf.html" class="btn btn-neutral float-left" title="opf" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
+          <footer>
 
   <hr/>
 
