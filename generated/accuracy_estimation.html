@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>accuracy_estimation &mdash; TensorConvolutionPlus 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            TensorConvolutionPlus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TensorConvolutionPlus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">accuracy_estimation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/accuracy_estimation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-accuracy_estimation">
+<span id="accuracy-estimation"></span><h1>accuracy_estimation<a class="headerlink" href="#module-accuracy_estimation" title="Link to this heading"></a></h1>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.accuracy_brute_force" title="accuracy_estimation.accuracy_brute_force"><code class="xref py py-obj docutils literal notranslate"><span class="pre">accuracy_brute_force</span></code></a>(ground_truth_file, ...)</p></td>
+<td><p>Calculate and print mean squared error (MSE) for feasible and total points.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.correct_feasible_and_infeasible" title="accuracy_estimation.correct_feasible_and_infeasible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">correct_feasible_and_infeasible</span></code></a>(...)</p></td>
+<td><p>Evaluate the feasibility of points.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.extend_feasible_and_infeasible" title="accuracy_estimation.extend_feasible_and_infeasible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extend_feasible_and_infeasible</span></code></a>(...)</p></td>
+<td><p>Extend the feasible and infeasible regions for visualization.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.find_value_close2list" title="accuracy_estimation.find_value_close2list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_value_close2list</span></code></a>(lst, voi)</p></td>
+<td><p>Find the index and closest value in a list to a specified value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.get_heatmap_matrix" title="accuracy_estimation.get_heatmap_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_heatmap_matrix</span></code></a>(x_flex, y_flex, step_p, ...)</p></td>
+<td><p>Generate a heatmap matrix based on provided coordinates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.get_inf_matrix" title="accuracy_estimation.get_inf_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_inf_matrix</span></code></a>(x_flex, y_flex, step_p, ...)</p></td>
+<td><p>Generate the non-feasible space matrix based on provided data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.get_info_matrix" title="accuracy_estimation.get_info_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_info_matrix</span></code></a>(x_flex, y_flex, x_nflex, ...)</p></td>
+<td><p>Get information for the case study &quot;DFC Improving TSOs Flexibility Shift Selection&quot;.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.info_options" title="accuracy_estimation.info_options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">info_options</span></code></a>(x_flexible, x_non_flexible, ...)</p></td>
+<td><p>This function plots and prints information for the case study 'DFC Improving TSOs Flexibility Shift Selection'.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.loop_acc" title="accuracy_estimation.loop_acc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loop_acc</span></code></a>(ground_truth, conv_results, inf)</p></td>
+<td><p>Calculate and return accuracy metrics for UC2 scenarios.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.plot_results" title="accuracy_estimation.plot_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_results</span></code></a>(ground_truth, conv_results, ...)</p></td>
+<td><p>Generate a visualization of feasible and infeasible regions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#accuracy_estimation.range_acc_case_study" title="accuracy_estimation.range_acc_case_study"><code class="xref py py-obj docutils literal notranslate"><span class="pre">range_acc_case_study</span></code></a>(net, settings, ...)</p></td>
+<td><p>Run some simulations for range accuracy case study.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Demetris Chrysostomou.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

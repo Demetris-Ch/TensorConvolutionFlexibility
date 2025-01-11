@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>conv_simulations &mdash; TensorConvolutionPlus 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            TensorConvolutionPlus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TensorConvolutionPlus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">conv_simulations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/conv_simulations.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-conv_simulations">
+<span id="conv-simulations"></span><h1>conv_simulations<a class="headerlink" href="#module-conv_simulations" title="Link to this heading"></a></h1>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.adaptable_new_op" title="conv_simulations.adaptable_new_op"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adaptable_new_op</span></code></a>(net, init_pcc_pq[, ...])</p></td>
+<td><p>Calculate FA using previous FA estimation for different operating conditions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.combine_shapes" title="conv_simulations.combine_shapes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">combine_shapes</span></code></a>(shapes, pq_steps)</p></td>
+<td><p>Combine the feasible regions for different discontinuous area setpoints.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.combine_shapes_const_flex" title="conv_simulations.combine_shapes_const_flex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">combine_shapes_const_flex</span></code></a>(shapes, pq_steps, flex)</p></td>
+<td><p>Combine the feasible regions for different discontinuous area setpoints, in case where no network constraint can be reached.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.create_mat_dict_incl_delta" title="conv_simulations.create_mat_dict_incl_delta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_mat_dict_incl_delta</span></code></a>(result_dict, dp, ...)</p></td>
+<td><p>Create matrices, dictionaries, and axes from a result dictionary including delta values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.create_mat_dict_order" title="conv_simulations.create_mat_dict_order"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_mat_dict_order</span></code></a>(result_dict, dp, dq[, ...])</p></td>
+<td><p>Create matrices and dictionaries from a result dictionary using PyTorch tensors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.create_mat_dict_tensor" title="conv_simulations.create_mat_dict_tensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_mat_dict_tensor</span></code></a>(result_dict, dp, dq)</p></td>
+<td><p>Create matrices and dictionaries from a result dictionary using PyTorch tensors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.create_mat_dict_tensorv2" title="conv_simulations.create_mat_dict_tensorv2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_mat_dict_tensorv2</span></code></a>(result_dict, dp, dq)</p></td>
+<td><p>Create matrices and dictionaries from a result dictionary using PyTorch tensors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.create_multi_small_fsp_fas" title="conv_simulations.create_multi_small_fsp_fas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_multi_small_fsp_fas</span></code></a>(prof_dict, dp, ...)</p></td>
+<td><p>Create a multi-flexibility area (MFA) by combining small feasible space profiles.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.df_to_mat_tensor_scaled_and_init" title="conv_simulations.df_to_mat_tensor_scaled_and_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">df_to_mat_tensor_scaled_and_init</span></code></a>(df, dp, dq)</p></td>
+<td><p>Take dataframes of power flow results and create matrices of feasible regions, sensitivities for tensor convolutions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.df_to_mat_tensor_torch" title="conv_simulations.df_to_mat_tensor_torch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">df_to_mat_tensor_torch</span></code></a>(df, dp, dq)</p></td>
+<td><p>Take dataframes of power flow results and create matrices of feasible regions, sensitivities for tensor convolutions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.df_to_mat_tensor_torchv2" title="conv_simulations.df_to_mat_tensor_torchv2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">df_to_mat_tensor_torchv2</span></code></a>(df, dp, dq)</p></td>
+<td><p>Take dataframes of power flow results and create matrices of feasible regions, sensitivities for tensor convolutions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.enhance_multi_big_fa" title="conv_simulations.enhance_multi_big_fa"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enhance_multi_big_fa</span></code></a>(fa[, times])</p></td>
+<td><p>Enhance the size of a multi-flexibility area (MFA) using bilinear interpolation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.find_value_close2list" title="conv_simulations.find_value_close2list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_value_close2list</span></code></a>(lst, voi)</p></td>
+<td><p>Find the index and closest value in a list to a specified value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_bus_line_and_trafo_names" title="conv_simulations.get_bus_line_and_trafo_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_bus_line_and_trafo_names</span></code></a>(net)</p></td>
+<td><p>Get names of buses, lines, and transformers in a power distribution network.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_delta" title="conv_simulations.get_delta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_delta</span></code></a>(df, dp, dq, init_pq)</p></td>
+<td><p>Take dataframes of power flow results and create matrices of feasible regions, sensitivities for tensor convolutions, for non-linear FSPS.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_init_net_state" title="conv_simulations.get_init_net_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_init_net_state</span></code></a>(net)</p></td>
+<td><p>Calculate initial network component voltage and loading values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_multi_conv_key_adapting_new_op" title="conv_simulations.get_multi_conv_key_adapting_new_op"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_multi_conv_key_adapting_new_op</span></code></a>(comp, ...)</p></td>
+<td><p>Calculate flexibility region for component from sensitive FSPs using previous FA estimation for different operating conditions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_multi_conv_key_saving" title="conv_simulations.get_multi_conv_key_saving"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_multi_conv_key_saving</span></code></a>(fsps_of_comp, ...)</p></td>
+<td><p>Calculate flexibility region for component from sensitive FSPs, perform TTD on the tensors and save them locally.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_multi_conv_key_with_delta" title="conv_simulations.get_multi_conv_key_with_delta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_multi_conv_key_with_delta</span></code></a>(fsps_of_comp, ...)</p></td>
+<td><p>Calculate flexibility region for component from sensitive FSPs, while having discrete FSPs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_multi_conv_torch" title="conv_simulations.get_multi_conv_torch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_multi_conv_torch</span></code></a>(fsps_of_comp, ...[, ...])</p></td>
+<td><p>Calculate flexibility region for component from sensitive FSPs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_multi_conv_torch_split" title="conv_simulations.get_multi_conv_torch_split"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_multi_conv_torch_split</span></code></a>(fsps_of_comp, ...)</p></td>
+<td><p>Calculate flexibility region for component from sensitive FSPs, but merge FSPs until maximum fsps are no_max-1.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_multi_result_for_0_effective" title="conv_simulations.get_multi_result_for_0_effective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_multi_result_for_0_effective</span></code></a>(...)</p></td>
+<td><p>Estimate flexibility area if no component can reach its constraint.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_multi_uncertain_fa" title="conv_simulations.get_multi_uncertain_fa"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_multi_uncertain_fa</span></code></a>(pq_mat, large_fa, ...)</p></td>
+<td><p>Calculate multiple uncertain feasibility areas from given power matrices.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_new_conv_axes2" title="conv_simulations.get_new_conv_axes2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_new_conv_axes2</span></code></a>(list_of_rows, ...)</p></td>
+<td><p>Combine axes per FSP to get the final flexibility area axes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_non_effective_multi_conv" title="conv_simulations.get_non_effective_multi_conv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_non_effective_multi_conv</span></code></a>(...)</p></td>
+<td><p>Estimate flexibility area by convolving non-effective fsps with the region from the effective fsps.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_non_effective_multi_conv_with_delta" title="conv_simulations.get_non_effective_multi_conv_with_delta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_non_effective_multi_conv_with_delta</span></code></a>(...)</p></td>
+<td><p>Estimate flexibility area by convolving non-effective fsps with the region from the effective fsps, also accounting for non-effective non-linear FSPs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.get_result_for_0_effective_with_delta" title="conv_simulations.get_result_for_0_effective_with_delta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_result_for_0_effective_with_delta</span></code></a>(...)</p></td>
+<td><p>Estimate flexibility area if no component can reach its constraint, and non-linear FSPs exist.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.numpy_tensor_conv_simulations_saving" title="conv_simulations.numpy_tensor_conv_simulations_saving"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy_tensor_conv_simulations_saving</span></code></a>(net, ...)</p></td>
+<td><p>Calculate FA using Tensors and Convolutions, while saving the tensors (after TTD) to adapt FA in other operating conditions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.numpy_tensor_conv_simulations_with_delta" title="conv_simulations.numpy_tensor_conv_simulations_with_delta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy_tensor_conv_simulations_with_delta</span></code></a>(...)</p></td>
+<td><p>Calculate FA using Tensors and Convolutions, when at least 1 fsp can only shift in certain setpoints.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.profiles_to_mat" title="conv_simulations.profiles_to_mat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">profiles_to_mat</span></code></a>(profiles, dp, dq, init_fsp_pq)</p></td>
+<td><p>Take dataframes of power flow results and create matrices of feasible regions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.reduce_multi_fa_small" title="conv_simulations.reduce_multi_fa_small"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduce_multi_fa_small</span></code></a>(fa[, times])</p></td>
+<td><p>Reduce the size of a multi-flexibility area (MFA) using bi-linear interpolation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.run_all_tensor_flex_areas" title="conv_simulations.run_all_tensor_flex_areas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_all_tensor_flex_areas</span></code></a>(net, pq_profiles, ...)</p></td>
+<td><p>Run power flows for all FSP setpoints given.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.split_lin_from_non_lin" title="conv_simulations.split_lin_from_non_lin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_lin_from_non_lin</span></code></a>(comp_dict, non_lin_fsp)</p></td>
+<td><p>Split linear from non-linear FSPs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.torch_tensor_conv_large_simulations" title="conv_simulations.torch_tensor_conv_large_simulations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">torch_tensor_conv_large_simulations</span></code></a>(net, ...)</p></td>
+<td><p>Calculate FA using Tensors and Convolutions, but merge FSPs in components who have no_max or more FSPs sensitivities, until maximum sensitive FSPs are no_max-1 per component.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#conv_simulations.torch_tensor_conv_simulations" title="conv_simulations.torch_tensor_conv_simulations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">torch_tensor_conv_simulations</span></code></a>(net, ...[, ...])</p></td>
+<td><p>Calculate FA using Tensors and Convolutions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#conv_simulations.update_conv_pqs" title="conv_simulations.update_conv_pqs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_conv_pqs</span></code></a>(net, fsp_idx, fsp_type, profile)</p></td>
+<td><p>Update the FSPs to perform power flows.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Demetris Chrysostomou.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

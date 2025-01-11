@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>plotting &mdash; TensorConvolutionPlus 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            TensorConvolutionPlus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TensorConvolutionPlus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">plotting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/plotting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-plotting">
+<span id="plotting"></span><h1>plotting<a class="headerlink" href="#module-plotting" title="Link to this heading"></a></h1>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#plotting.box_plt1" title="plotting.box_plt1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">box_plt1</span></code></a>(plt1_dict, acc_type)</p></td>
+<td><p>Plot accuracy information.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#plotting.box_plt3" title="plotting.box_plt3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">box_plt3</span></code></a>(plt1_dict, est_dict)</p></td>
+<td><p>Generate speed plots.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#plotting.get_estimated_times" title="plotting.get_estimated_times"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_estimated_times</span></code></a>()</p></td>
+<td><p>Get dictionaries from results of UC2.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#plotting.get_means12" title="plotting.get_means12"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_means12</span></code></a>(plt_dict)</p></td>
+<td><p>Get mean values from results.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#plotting.get_rel_dicts" title="plotting.get_rel_dicts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_rel_dicts</span></code></a>(net_name)</p></td>
+<td><p>Get dictionaries from results of UC2.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#plotting.get_uncertainty" title="plotting.get_uncertainty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_uncertainty</span></code></a>(df[, name, plot_type])</p></td>
+<td><p>Plot results including uncertainty.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#plotting.get_uncertainty_interpret" title="plotting.get_uncertainty_interpret"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_uncertainty_interpret</span></code></a>(uncert_df, ...[, ...])</p></td>
+<td><p>Plot results including uncertainty.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#plotting.plot_feasible_and_infeasible" title="plotting.plot_feasible_and_infeasible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_feasible_and_infeasible</span></code></a>(x_flexible, ...)</p></td>
+<td><p>Plot Monte Carlo simulation results including infeasible samples.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#plotting.plot_mc" title="plotting.plot_mc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_mc</span></code></a>(x_flexible, y_flexible, ...[, loc])</p></td>
+<td><p>Plot Monte Carlo simulation results.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#plotting.plot_multi_convolution" title="plotting.plot_multi_convolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_multi_convolution</span></code></a>(filename, inf, q_loc, ...)</p></td>
+<td><p>Plot convolution algorithm result.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#plotting.plot_only_feasible" title="plotting.plot_only_feasible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_only_feasible</span></code></a>(x_flexible, y_flexible, ...)</p></td>
+<td><p>Plot Monte Carlo simulation results only for feasible samples.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#plotting.plot_opf_res" title="plotting.plot_opf_res"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_opf_res</span></code></a>(filename, init_pq, text)</p></td>
+<td><p>Plot the OPF results.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#plotting.plot_uc3" title="plotting.plot_uc3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_uc3</span></code></a>(net1, net2)</p></td>
+<td><p>Plot use case 3 figures.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Demetris Chrysostomou.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

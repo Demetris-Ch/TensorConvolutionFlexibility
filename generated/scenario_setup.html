@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>scenario_setup &mdash; TensorConvolutionPlus 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            TensorConvolutionPlus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TensorConvolutionPlus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">scenario_setup</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/scenario_setup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-scenario_setup">
+<span id="scenario-setup"></span><h1>scenario_setup<a class="headerlink" href="#module-scenario_setup" title="Link to this heading"></a></h1>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#scenario_setup.apply_cs" title="scenario_setup.apply_cs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_cs</span></code></a>(net, settings)</p></td>
+<td><p>Apply CS scenario shifts on the network</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#scenario_setup.apply_tss" title="scenario_setup.apply_tss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_tss</span></code></a>(net, settings)</p></td>
+<td><p>Apply TSS scenario shifts on the network</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#scenario_setup.apply_uss" title="scenario_setup.apply_uss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_uss</span></code></a>(net, settings)</p></td>
+<td><p>Apply USS scenario shifts on the network</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#scenario_setup.get_fsp" title="scenario_setup.get_fsp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_fsp</span></code></a>(settings)</p></td>
+<td><p>Get indices of FSPs if any of them are specified as -1.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#scenario_setup.get_network" title="scenario_setup.get_network"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_network</span></code></a>(settings)</p></td>
+<td><p>Gen the network specified in settings.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#scenario_setup.get_observable_lines_buses" title="scenario_setup.get_observable_lines_buses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_observable_lines_buses</span></code></a>(settings)</p></td>
+<td><p>Get indices of observable lines and buses if any of them are specified as -1.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#scenario_setup.get_operating_point" title="scenario_setup.get_operating_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_operating_point</span></code></a>(settings)</p></td>
+<td><p>Get network PCC P,Q (y)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#scenario_setup.get_unobservable_lines_buses_indices" title="scenario_setup.get_unobservable_lines_buses_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_unobservable_lines_buses_indices</span></code></a>(settings)</p></td>
+<td><p>Gen indices of network unobservable lines (all lines not specified as observable)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api.html#scenario_setup.rand_resample" title="scenario_setup.rand_resample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rand_resample</span></code></a>(net, no_change_loads, ...)</p></td>
+<td><p>Randomly sample Operating Condition shift for adaptability case study</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api.html#scenario_setup.update_settings" title="scenario_setup.update_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_settings</span></code></a>(settings)</p></td>
+<td><p>Update settings by changing observable and unobservable bus and line information based on the loaded network</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Demetris Chrysostomou.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
