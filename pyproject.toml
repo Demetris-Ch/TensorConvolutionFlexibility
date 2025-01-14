@@ -11,7 +11,7 @@ include-package-data = true
 
 [project]
 name = "TensorConvolutionPlus"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
   { name="Demetris Chrysostomou", email="d.chrysostomou@tudelft.nl" },
 ]
@@ -37,5 +37,5 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Demetris-Ch/TensorConvolutionFlexibility"
+Homepage = "https://demetris-ch.github.io/TensorConvolutionFlexibility/"
 Issues = "https://github.com/Demetris-Ch/TensorConvolutionFlexibility"

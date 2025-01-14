@@ -5,12 +5,11 @@ Usage
 ---------------
 I. Reference
 ---------------
-
 The package documentation preprint is currently available in ArXiv under:
 
-DOI: https://doi.org/10.1109/TSG.2024.3453667
+DOI: https://doi.org/10.48550/arXiv.2501.06976
 
-Available at: https://ieeexplore.ieee.org/document/10663439
+Available at: https://arxiv.org/abs/2501.06976
 
 The TensorConvolution+ algorithm was published in IEEE Transactions on Smart Grid and can be read and referenced using:
 
@@ -18,19 +17,20 @@ DOI: https://doi.org/10.1109/TSG.2024.3453667
 
 Available at: https://ieeexplore.ieee.org/document/10663439
 
+
 ---------------------
 II. Acknowledgements
 ---------------------
 The authors are part of the IEPG group and AI Energy lab of TU Delft.
 This research is part of the research program 'MegaMind - Measuring, Gathering, Mining and Integrating Data for Self-management in the Edge of the Electricity System', (partly) financed by the Dutch Research Council (NWO) through the Perspectief program under number P19-25.
 
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/IEPG_logo.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/IEPG_logo.jpg
   :width: 150
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/DAI_Energy_logo.png
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/DAI_Energy_logo.png
   :width: 150
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/Tu-delft.png
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/Tu-delft.png
   :width: 150
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/MegaMindLogo.png
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/MegaMindLogo.png
   :width: 120
 
 
@@ -139,13 +139,13 @@ This section includes examples using the Monte Carlo PF estimation functionality
 The examples vary in sampling distribution and number of samples.
 The figures bellow illustrate the resulting FA for each line respectively. The lines without *distribution* input automatically obtain the 'Hard' distribution.
 
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/MonteCarlo2024-11-08_14-30-32_incl_infeasible.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/MonteCarlo2024-11-08_14-30-32_incl_infeasible.jpg
   :width: 400
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/MonteCarlo2024-11-08_14-25-40_incl_infeasible.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/MonteCarlo2024-11-08_14-25-40_incl_infeasible.jpg
   :width: 400
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/MonteCarlo2024-11-05_17-06-58_incl_infeasible.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/MonteCarlo2024-11-05_17-06-58_incl_infeasible.jpg
   :width: 400
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/MonteCarlo2024-11-08_13-15-01_incl_infeasible.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/MonteCarlo2024-11-08_13-15-01_incl_infeasible.jpg
   :width: 400
 
 IV.B) Exhaustive Power Flow
@@ -163,9 +163,9 @@ This section includes examples using the exhaustive power flow-based functionali
 The examples vary in resolution and number of FSPs.
 The figures bellow illustrate the resulting FA for each line respectively.
 
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/ExhaustivePowerFlow2024-11-05_17-00-00_incl_infeasible.png
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/ExhaustivePowerFlow2024-11-05_17-00-00_incl_infeasible.png
   :width: 380
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/ExhaustivePowerFlow2024-11-08_14-10-05_incl_infeasible.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/ExhaustivePowerFlow2024-11-08_14-10-05_incl_infeasible.jpg
   :width: 400
 
 IV.C) Optimal Power Flow
@@ -182,9 +182,9 @@ This section illustrates examples using the OPF estimation functionality. These 
 The examples vary in FSPs.
 The figures bellow illustrate the resulting FA for each line respectively.
 
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/OptimalPowerFlow2024-11-12_17-40-42.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/OptimalPowerFlow2024-11-12_17-40-42.jpg
   :width: 400
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/OptimalPowerFlow2024-11-12_17-47-00.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/OptimalPowerFlow2024-11-12_17-47-00.jpg
   :width: 400
 
 IV.D) TensorConvolution+
@@ -201,9 +201,9 @@ This section illustrates examples using the TensorConvolution+ FA estimation fun
 The examples vary in number of FSPs and shapes of flexibility offers. The example without the *flex_shape* input automatically obtains the value 'Smax'.
 The figures bellow illustrate the resulting FA for each line respectively.
 
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/TensorConvolutionPlus2024-11-05_18-18-32.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/TensorConvolutionPlus2024-11-05_18-18-32.jpg
   :width: 400
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/TensorConvolutionPlus2024-11-08_14-38-25.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/TensorConvolutionPlus2024-11-08_14-38-25.jpg
   :width: 400
 
 
@@ -215,7 +215,7 @@ TensorConvolution+ can also simulate FAs with FSPs offering discrete setpoints o
 
 The resulting figure is:
 
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/TensorConvolutionPlus2024-11-08_17-08-10.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/TensorConvolutionPlus2024-11-08_17-08-10.jpg
   :width: 400
 
 IV.E) TensorConvolution+ Merge
@@ -230,7 +230,7 @@ The example line is:
 
 The resulting figure is:
 
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/TensorConvolutionPlusMegeFSPs2024-11-08_17-13-06.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/TensorConvolutionPlusMegeFSPs2024-11-08_17-13-06.jpg
   :width: 400
 
 IV.F) TensorConvolution+ Adapt
@@ -269,11 +269,11 @@ This section showcases the function storing information using the TensorConvolut
 The resulting figures for the stored, adapted and validated flexibility areas are:
 
 
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/TensorConvolutionPlusStore2024-11-08_17-44-24.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/TensorConvolutionPlusStore2024-11-08_17-44-24.jpg
   :width: 400
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/TensorConvolutionPlusAdapt2024-11-08_17-59-04.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/TensorConvolutionPlusAdapt2024-11-08_17-59-04.jpg
   :width: 400
-.. image:: https://github.com/Demetris-Ch/TensorConvolutionFlexibility/blob/main/plots/TensorConvolutionPlus2024-11-08_17-59-28.jpg
+.. image:: https://raw.githubusercontent.com/Demetris-Ch/TensorConvolutionFlexibility/main/plots/TensorConvolutionPlus2024-11-08_17-59-28.jpg
   :width: 400
 
 

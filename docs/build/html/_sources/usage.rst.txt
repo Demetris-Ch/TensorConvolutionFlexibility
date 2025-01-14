@@ -7,9 +7,9 @@ I. Reference
 ---------------
 The package documentation preprint is currently available in ArXiv under:
 
-DOI: https://doi.org/10.1109/TSG.2024.3453667
+DOI: https://doi.org/10.48550/arXiv.2501.06976
 
-Available at: https://ieeexplore.ieee.org/document/10663439
+Available at: https://arxiv.org/abs/2501.06976
 
 The TensorConvolution+ algorithm was published in IEEE Transactions on Smart Grid and can be read and referenced using:
 
